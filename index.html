@@ -10,15 +10,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Hind+Siliguri:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
     <script>
         tailwind.config = {
             darkMode: 'class',
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['Inter', 'Hind Siliguri', 'sans-serif'],
+                        sans: ['Inter', 'Hind Siliguri', 'system-ui', 'sans-serif'],
                         bengali: ['Hind Siliguri', 'sans-serif'],
+                        display: ['Inter', 'system-ui', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+                    },
+                    fontSize: {
+                        '2xs': ['0.7rem',   { lineHeight: '1rem' }],
+                        'xs':  ['0.78rem',  { lineHeight: '1.15rem' }],
+                        'sm':  ['0.9rem',   { lineHeight: '1.35rem' }],
+                        'base':['1.0625rem',{ lineHeight: '1.65rem' }],
+                        'lg':  ['1.25rem',  { lineHeight: '1.85rem' }],
+                        'xl':  ['1.5rem',   { lineHeight: '2.1rem' }],
+                        '2xl': ['1.875rem', { lineHeight: '2.4rem' }],
+                        '3xl': ['2.25rem',  { lineHeight: '2.7rem' }],
                     },
                     colors: {
                         deRed: '#DD0000',
@@ -65,17 +77,33 @@
         .dark .tab-btn.active {
             background: #f59e0b;
             color: #0f172a;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.4), 0 4px 16px -2px rgba(245, 158, 11, 0.35), 0 0 24px -4px rgba(245, 158, 11, 0.2);
+        }
+        .press {
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .press:active {
+            transform: scale(0.96);
+        }
+        .press-subtle {
+            transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .press-subtle:active {
+            transform: scale(0.98);
         }
         .card-hover {
-            transition: all 0.2s ease;
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), ring-color 0.25s ease;
+        }
+        .card-hover:active {
+            transform: scale(0.985) translateY(-1px);
         }
         .card-hover:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 32px -8px rgba(15, 23, 42, 0.12), 0 4px 12px -4px rgba(15, 23, 42, 0.06);
         }
         .dark .card-hover:hover {
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.5);
+            --tw-ring-color: rgba(255, 255, 255, 0.12);
         }
         .art-pill-der {
             background: #dbeafe;
@@ -112,11 +140,23 @@
         .speed-btn.active-speed {
             background: #f59e0b;
             color: #0f172a;
-            box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
         }
         .dark .speed-btn.active-speed {
             background: #f59e0b;
             color: #0f172a;
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.4), 0 4px 16px -2px rgba(245, 158, 11, 0.35), 0 0 24px -4px rgba(245, 158, 11, 0.2);
+        }
+        .accent-glow {
+            box-shadow: 0 8px 20px -6px rgba(245, 158, 11, 0.35), 0 0 0 1px rgba(245, 158, 11, 0.15);
+        }
+        .dark .accent-glow {
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.4), 0 8px 24px -6px rgba(245, 158, 11, 0.45), 0 0 32px -8px rgba(245, 158, 11, 0.3);
+        }
+        .accent-glow-soft {
+            box-shadow: 0 4px 12px -2px rgba(245, 158, 11, 0.2);
+        }
+        .dark .accent-glow-soft {
+            box-shadow: 0 0 0 1px rgba(245, 158, 11, 0.25), 0 4px 16px -4px rgba(245, 158, 11, 0.3);
         }
         .badge-count {
             font-size: 0.8rem;
@@ -131,16 +171,20 @@
             color: #e2e8f0;
         }
         .text-base {
-            font-size: 1.25rem !important;
+            font-size: 1.0625rem !important;
+            line-height: 1.65rem !important;
         }
         .text-lg {
             font-size: 1.5rem !important;
+            line-height: 2.1rem !important;
         }
         [class~="text-[12px]"] {
-            font-size: 1rem !important;
+            font-size: 0.95rem !important;
+            line-height: 1.4rem !important;
         }
         [class~="text-[13px]"] {
             font-size: 1.0625rem !important;
+            line-height: 1.5rem !important;
         }
         .brand-title {
             font-size: 1rem !important;
@@ -151,16 +195,20 @@
             }
         }
         .bangla-t2-t3.text-base {
-            font-size: 1.375rem !important;
+            font-size: 1.25rem !important;
+            line-height: 1.85rem !important;
         }
         .bangla-t2-t3[class~="text-[13px]"] {
-            font-size: 1.1875rem !important;
+            font-size: 1.125rem !important;
+            line-height: 1.6rem !important;
         }
         .t2-heading {
             font-size: 1.375rem !important;
+            line-height: 1.95rem !important;
         }
         .t2-subheading {
             font-size: 1.25rem !important;
+            line-height: 1.85rem !important;
         }
         .t2-control {
             font-size: 1rem !important;
@@ -183,10 +231,60 @@
         }
         html, body {
             touch-action: manipulation;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            text-rendering: optimizeLegibility;
+        }
+        .font-mono-de {
+            font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-feature-settings: "ss02", "cv11";
         }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 dark:bg-ghBg dark:text-ghText transition-colors duration-200 font-sans antialiased min-h-screen flex flex-col">
+
+    <!-- ========== SETTINGS BACKDROP (mobile bottom sheet) ========== -->
+    <div id="settings-backdrop" class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 z-40 md:hidden" onclick="closeSettingsPanel()"></div>
+
+    <!-- ========== SETTINGS PANEL ========== -->
+    <div id="settings-panel" class="fixed z-50 opacity-0 pointer-events-none
+        inset-x-0 bottom-0 w-full
+        md:left-auto md:right-4 md:top-16 md:bottom-auto md:w-56
+        bg-white dark:bg-ghSurface rounded-t-3xl md:rounded-xl shadow-lg p-5 md:p-4 pb-8 md:pb-4
+        border-t border-x-0 border-b-0 md:border border-slate-200 dark:border-ghBorder
+        transform translate-y-full md:translate-y-0 transition-all duration-300 ease-out">
+        <!-- Drag handle (mobile only) -->
+        <div class="md:hidden flex justify-center -mt-1 mb-3">
+            <div class="w-10 h-1.5 rounded-full bg-slate-300 dark:bg-white/20"></div>
+        </div>
+        <div class="mb-3">
+            <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Dark Mode</label>
+            <button onclick="toggleTheme()" class="press-subtle w-full h-9 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-600 flex items-center justify-center transition">
+                <i class="fa-solid fa-moon dark:hidden"></i>
+                <i class="fa-solid fa-sun hidden dark:block"></i>
+            </button>
+        </div>
+        <div class="mb-3">
+            <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Page Zoom</label>
+            <select id="page-zoom" onchange="changePageZoom(this.value)" aria-label="Page zoom" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+                <option value="45">50%</option>
+                <option value="60">80%</option>
+                <option value="80" selected>100%</option>
+                <option value="100">110%</option>
+                <option value="120">120%</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Audio Speed</label>
+            <select id="tts-speed" onchange="setTtsSpeed(this.value)" aria-label="Audio speed" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+                <option value="0.6">0.6x</option>
+                <option value="0.8">0.8x</option>
+                <option value="1.0" selected>1.0x</option>
+                <option value="1.2">1.2x</option>
+                <option value="1.5">1.5x</option>
+            </select>
+        </div>
+    </div>
 
     <!-- ========== TOAST ========== -->
     <div id="toast" class="fixed top-20 right-4 z-50 pointer-events-none transform transition-all duration-300 translate-x-full opacity-0 bg-slate-900 dark:bg-amber-500 text-white dark:text-slate-950 text-base font-bold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700 dark:border-amber-400">
@@ -195,14 +293,31 @@
     </div>
 
     <!-- ========== HEADER ========== -->
-    <header class="sticky top-0 z-40 bg-white/85 dark:bg-ghSurface/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-ghBorder/70 shadow-sm">
+    <header class="sticky top-0 z-40 bg-white/70 dark:bg-ghBg/70 backdrop-blur-2xl backdrop-saturate-150 border-b border-slate-900/5 dark:border-white/5 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
 
                 <!-- Brand -->
-                <div class="flex items-center gap-3 cursor-pointer flex-1 min-w-0" onclick="switchTab('t1')">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-red-500 to-slate-900 flex items-center justify-center shadow-md">
-                        <span class="text-lg">🇩🇪</span>
+                <div class="press-subtle flex items-center gap-3 cursor-pointer flex-1 min-w-0" onclick="switchTab('t1')">
+                    <div class="relative w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-red-500 to-slate-900 flex items-center justify-center shadow-md overflow-hidden">
+                        <svg viewBox="0 0 40 40" class="w-7 h-7" xmlns="http://www.w3.org/2000/svg" aria-label="Deutsch mit Shakil logo">
+                            <defs>
+                                <linearGradient id="dsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.98"/>
+                                    <stop offset="100%" stop-color="#fef3c7" stop-opacity="0.95"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Stylized "DS" monogram with subtle German flag accent -->
+                            <text x="20" y="27" text-anchor="middle"
+                                  font-family="Inter, system-ui, sans-serif"
+                                  font-size="20" font-weight="900"
+                                  letter-spacing="-1"
+                                  fill="url(#dsGradient)">DS</text>
+                            <!-- Tiny German flag accent (3 stripes) on the bottom edge -->
+                            <rect x="0" y="35" width="13.33" height="5" fill="#000000"/>
+                            <rect x="13.33" y="35" width="13.34" height="5" fill="#DD0000"/>
+                            <rect x="26.67" y="35" width="13.33" height="5" fill="#FFCC00"/>
+                        </svg>
                     </div>
                     <div class="leading-tight min-w-0">
                         <div class="flex items-center gap-2">
@@ -215,10 +330,10 @@
 
                 <!-- Desktop Tabs -->
                 <nav class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800/60 p-1 rounded-2xl border border-slate-200 dark:border-slate-700">
-                    <button onclick="switchTab('t1')" id="tab-t1" class="tab-btn active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5"><i class="fa-solid fa-comment"></i><span>Teil 1</span></button>
-                    <button onclick="switchTab('t2')" id="tab-t2" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-microphone"></i><span>Teil 2</span></button>
-                    <button onclick="switchTab('t3')" id="tab-t3" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-handshake"></i><span>Teil 3</span></button>
-                    <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-amber-500"></i><span>Instruction</span></button>
+                    <button onclick="switchTab('t1')" id="tab-t1" class="tab-btn press-subtle active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5"><i class="fa-solid fa-comment"></i><span>Teil 1</span></button>
+                    <button onclick="switchTab('t2')" id="tab-t2" class="tab-btn press-subtle px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-microphone"></i><span>Teil 2</span></button>
+                    <button onclick="switchTab('t3')" id="tab-t3" class="tab-btn press-subtle px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-handshake"></i><span>Teil 3</span></button>
+                    <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn press-subtle px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-amber-500"></i><span>Instruction</span></button>
                 </nav>
 
                 <!-- Header Action Buttons & Setting -->
@@ -226,80 +341,49 @@
                     <!-- Header Action Buttons -->
                     <div id="header-actions" class="flex items-center gap-1.5">
                         <!-- T1 Translation -->
-                        <button id="t1-bengali-btn" onclick="toggleT1Bengali()" data-tab="t1" class="hdr-action-btn px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
+                        <button id="t1-bengali-btn" onclick="toggleT1Bengali()" data-tab="t1" class="hdr-action-btn press px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                         <!-- T2 Timer -->
-                        <button id="t2-timer-btn" onclick="toggleT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Timer" title="Timer">
+                        <button id="t2-timer-btn" onclick="toggleT2Timer()" data-tab="t2" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Timer" title="Timer">
                             <i class="fa-solid fa-clock"></i><span id="t2-timer-display">1:30</span>
                         </button>
                         <!-- T2 Timer Reset -->
-                        <button id="t2-timer-reset-btn" onclick="resetT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Reset Timer" title="Reset Timer">
+                        <button id="t2-timer-reset-btn" onclick="resetT2Timer()" data-tab="t2" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Reset Timer" title="Reset Timer">
                             <i class="fa-solid fa-rotate-left"></i>
                         </button>
                         <!-- T2 Translation -->
-                        <button id="t2-bengali-btn" onclick="toggleT2Bengali()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
+                        <button id="t2-bengali-btn" onclick="toggleT2Bengali()" data-tab="t2" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                         <!-- T3 Timer -->
-                        <button id="t3-timer-btn" onclick="toggleT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Timer" title="Timer">
+                        <button id="t3-timer-btn" onclick="toggleT3Timer()" data-tab="t3" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Timer" title="Timer">
                             <i class="fa-solid fa-clock"></i><span id="t3-timer-display">3:00</span>
                         </button>
                         <!-- T3 Timer Reset -->
-                        <button id="t3-timer-reset-btn" onclick="resetT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Reset Timer" title="Reset Timer">
+                        <button id="t3-timer-reset-btn" onclick="resetT3Timer()" data-tab="t3" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Reset Timer" title="Reset Timer">
                             <i class="fa-solid fa-rotate-left"></i>
                         </button>
                         <!-- T3 Translation -->
-                        <button id="t3-bengali-btn" onclick="toggleT3Bengali()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
+                        <button id="t3-bengali-btn" onclick="toggleT3Bengali()" data-tab="t3" class="hdr-action-btn press hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Toggle Translation" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                     </div>
-                    <!-- Setting Button & Panel -->
-                    <div class="relative shrink-0">
-                        <button id="settings-btn" onclick="toggleSettings()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition" aria-label="Settings">
-                            <i class="fa-solid fa-cog text-slate-500 dark:text-amber-400"></i>
-                        </button>
-                        <!-- Settings Panel -->
-                        <div id="settings-panel" class="absolute right-0 top-14 w-48 bg-white dark:bg-ghSurface rounded-xl shadow-lg p-4 opacity-0 pointer-events-none transition-all duration-200 border border-slate-200 dark:border-ghBorder z-50">
-                            <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Dark Mode</label>
-                                <button onclick="toggleTheme()" class="w-full h-9 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-600 flex items-center justify-center transition">
-                                    <i class="fa-solid fa-moon dark:hidden"></i>
-                                    <i class="fa-solid fa-sun hidden dark:block"></i>
-                                </button>
-                            </div>
-                            <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Page Zoom</label>
-                                <select id="page-zoom" onchange="changePageZoom(this.value)" aria-label="Page zoom" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
-                                    <option value="45">50%</option>
-                                    <option value="60">80%</option>
-                                    <option value="80" selected>100%</option>
-                                    <option value="100">110%</option>
-                                    <option value="120">120%</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Audio Speed</label>
-                                <select id="tts-speed" onchange="setTtsSpeed(this.value)" aria-label="Audio speed" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
-                                    <option value="0.6">0.6x</option>
-                                    <option value="0.8">0.8x</option>
-                                    <option value="1.0" selected>1.0x</option>
-                                    <option value="1.2">1.2x</option>
-                                    <option value="1.5">1.5x</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Settings Button (panel + backdrop rendered separately) -->
+                    <button id="settings-btn" onclick="toggleSettings()" class="press shrink-0 w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition" aria-label="Settings">
+                        <i class="fa-solid fa-cog text-slate-500 dark:text-amber-400"></i>
+                    </button>
                 </div>
             </div>
         </div>
 
         <!-- Mobile Tabs -->
-        <div class="md:hidden flex items-center justify-around bg-white dark:bg-ghSurface border-t border-slate-200 dark:border-ghBorder py-1.5 text-[12px] font-bold">
-            <button onclick="switchTab('t1')" id="mtab-t1" class="flex flex-col items-center gap-0.5 text-sky-600 dark:text-amber-400" aria-label="Part 1"><i class="fa-solid fa-comment text-lg"></i></button>
-            <button onclick="switchTab('t2')" id="mtab-t2" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" aria-label="Part 2"><i class="fa-solid fa-microphone text-lg"></i></button>
-            <button onclick="switchTab('t3')" id="mtab-t3" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" aria-label="Part 3"><i class="fa-solid fa-handshake text-lg"></i></button>
-            <button onclick="switchTab('quiz')" id="mtab-quiz" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400" aria-label="Instruction"><i class="fa-solid fa-chalkboard-user text-lg text-amber-500"></i></button>
+        <div class="md:hidden flex items-center justify-around bg-white/80 dark:bg-ghSurface/80 backdrop-blur-xl border-t border-slate-900/5 dark:border-white/5 py-1.5 text-[12px] font-bold relative" id="mtab-container">
+            <span id="mtab-indicator" class="absolute top-1 left-0 h-9 rounded-2xl bg-sky-100 dark:bg-amber-500/15 transition-all duration-300 ease-out pointer-events-none" style="width: 0; transform: translateX(0);"></span>
+            <button onclick="switchTab('t1')" id="mtab-t1" class="press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-sky-600 dark:text-amber-400" aria-label="Part 1"><i class="fa-solid fa-comment text-lg"></i></button>
+            <button onclick="switchTab('t2')" id="mtab-t2" class="press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-slate-500 dark:text-slate-400" aria-label="Part 2"><i class="fa-solid fa-microphone text-lg"></i></button>
+            <button onclick="switchTab('t3')" id="mtab-t3" class="press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-slate-500 dark:text-slate-400" aria-label="Part 3"><i class="fa-solid fa-handshake text-lg"></i></button>
+            <button onclick="switchTab('quiz')" id="mtab-quiz" class="press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-slate-500 dark:text-slate-400" aria-label="Instruction"><i class="fa-solid fa-chalkboard-user text-lg text-amber-500"></i></button>
         </div>
     </header>
 
@@ -311,7 +395,7 @@
         <!-- ============================================================ -->
         <section id="view-t1" class="space-y-5">
 
-            <div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-5 shadow-sm">
+            <div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-5 shadow-sm">
                 <div class="mb-4">
                     <h2 class="text-lg font-extrabold text-slate-900 dark:text-white">Fragen stellen & Antworten</h2>
                     <p class="text-base text-slate-600 dark:text-slate-400">৪টি কার্ড · প্রশ্ন করুন ও উত্তর দিন</p>
@@ -319,7 +403,7 @@
                 <!-- Search, Sort, Study Mode, Bookmark in one row -->
                 <div class="flex items-center gap-2">
                     <span id="t1-count" class="badge-count mr-auto">113</span>
-                    <button id="t1-search-btn" onclick="toggleT1Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Search" title="Search">
+                    <button id="t1-search-btn" onclick="toggleT1Search()" class="press w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Search" title="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <div id="t1-search-wrap" class="hidden">
@@ -327,12 +411,12 @@
                     </div>
                     <select id="t1-sort" onchange="renderT1()" aria-label="Sort Part 1" class="w-24 sm:w-32 max-w-xs bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400"><option value="id">1-113</option><option value="az">A to Z</option><option value="za">Z to A</option></select>
                     <!-- Study Mode Toggle - shows eye only on mobile -->
-                    <button id="t1-study-btn" onclick="toggleT1StudyMode()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Study Mode">
+                    <button id="t1-study-btn" onclick="toggleT1StudyMode()" class="press px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Toggle Study Mode">
                         <i class="fa-solid fa-eye"></i>
                         <span class="hidden sm:block">Study Mode</span>
                     </button>
                     <!-- Bookmark Filter -->
-                    <button id="t1-bookmark-btn" onclick="toggleT1BookmarkFilter()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5 justify-center" aria-label="Filter Bookmarks">
+                    <button id="t1-bookmark-btn" onclick="toggleT1BookmarkFilter()" class="press px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5 justify-center" aria-label="Filter Bookmarks">
                         <i class="fa-solid fa-bookmark text-lg"></i>
                     </button>
                 </div>
@@ -347,7 +431,7 @@
         <!-- ============================================================ -->
         <section id="view-t2" class="hidden space-y-5">
 
-            <div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-5 shadow-sm">
+            <div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-5 shadow-sm">
                 <div class="mb-4">
                     <div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-[12px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Teil 2</span><h2 class="t2-heading text-lg font-extrabold text-slate-900 dark:text-white">Monolog · Speech</h2></div>
                     <p class="t2-subheading bangla-t2-t3 text-base text-slate-600 dark:text-slate-400">প্রায় ১.৫ মিনিট · বিষয়ভিত্তিক বক্তৃতা</p>
@@ -355,7 +439,7 @@
                 <!-- Search, Sort in one row -->
                 <div class="flex items-center gap-2 flex-wrap">
                     <span id="t2-count" class="badge-count mr-auto">25</span>
-                    <button id="t2-search-btn" onclick="toggleT2Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Search" title="Search">
+                    <button id="t2-search-btn" onclick="toggleT2Search()" class="press w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Search" title="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <div id="t2-search-wrap" class="hidden">
@@ -374,7 +458,7 @@
         <!-- ============================================================ -->
         <section id="view-t3" class="hidden space-y-5">
 
-            <div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-[12px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Teil 3</span><h2 class="text-lg font-extrabold text-slate-900 dark:text-white">Gemeinsam planen</h2></div>
                     <p class="bangla-t2-t3 text-base text-slate-600 dark:text-slate-400">পার্টনারের সাথে যৌথ পরিকল্পনা ও আলোচনার মাধ্যমে সময় ও সিদ্ধান্ত নির্ধারণ · Partnerarbeit</p>
@@ -626,7 +710,7 @@
 
             <!-- Video Resources -->
             <div class="space-y-6 mt-8">
-                <div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-6 shadow-sm">
+                <div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                         <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
                         <span>Video Resources / ভিডিও রিসোর্স</span>
@@ -674,18 +758,18 @@
         <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800 pt-6">
             <div></div>
             <div class="flex items-center gap-2 flex-wrap justify-center">
-                <a href="https://www.facebook.com/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Facebook" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-700 hover:bg-blue-600 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-f text-lg"></i></a>
-                <a href="https://m.me/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Message Deutsch mit Shakil on Facebook" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-messenger text-lg"></i></a>
-                <a href="https://www.youtube.com/@DeutschmitShakil" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on YouTube" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-md transition-all"><i class="fa-brands fa-youtube text-lg"></i></a>
-                <a href="https://www.instagram.com/deutschmitshakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Instagram" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-pink-600 hover:bg-pink-500 text-white shadow-md transition-all"><i class="fa-brands fa-instagram text-lg"></i></a>
-                <a href="https://forms.gle/f5jVHmwEgXgnWkG57" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base rounded-2xl shadow-md transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> আসন্ন কোর্সের জন্য নিবন্ধন করুন</a>
+                <a href="https://www.facebook.com/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Facebook" class="press w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-700 hover:bg-blue-600 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-f text-lg"></i></a>
+                <a href="https://m.me/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Message Deutsch mit Shakil on Facebook" class="press w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-messenger text-lg"></i></a>
+                <a href="https://www.youtube.com/@DeutschmitShakil" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on YouTube" class="press w-10 h-10 inline-flex items-center justify-center rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-md transition-all"><i class="fa-brands fa-youtube text-lg"></i></a>
+                <a href="https://www.instagram.com/deutschmitshakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Instagram" class="press w-10 h-10 inline-flex items-center justify-center rounded-xl bg-pink-600 hover:bg-pink-500 text-white shadow-md transition-all"><i class="fa-brands fa-instagram text-lg"></i></a>
+                <a href="https://forms.gle/f5jVHmwEgXgnWkG57" target="_blank" rel="noopener noreferrer" class="press inline-flex items-center gap-2 px-5 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base rounded-2xl shadow-md transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> আসন্ন কোর্সের জন্য নিবন্ধন করুন</a>
             </div>
         </div>
 
     </main>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="border-t border-slate-200 dark:border-ghBorder bg-white/70 dark:bg-ghSurface/70 backdrop-blur-sm py-4 mt-6 text-center text-[12px] text-slate-500 dark:text-ghTextMuted font-medium">
+    <footer class="border-t border-slate-900/5 dark:border-white/5 bg-white/70 dark:bg-ghSurface/70 backdrop-blur-sm py-4 mt-6 text-center text-[12px] text-slate-500 dark:text-ghTextMuted font-medium">
         <p>🇩🇪 Deutsch mit Shakil · Goethe A2 Sprechen Master</p>
         <p class="mt-0.5 text-[13px] text-slate-400 dark:text-slate-500">B1 Level is under construction · <i class="fa-regular fa-heart text-amber-500"></i> Viel Erfolg!</p>
     </footer>
@@ -2090,25 +2174,44 @@
         // ================================================================
         let settingsButtonClicked = false;
 
-        function toggleSettings() {
-            settingsButtonClicked = true;
+        function openSettingsPanel() {
             const panel = document.getElementById('settings-panel');
+            const backdrop = document.getElementById('settings-backdrop');
             if (!panel) return;
-            const isVisible = panel.classList.contains('opacity-0');
-            if (isVisible) {
-                panel.classList.remove('opacity-0', 'pointer-events-none');
-                panel.classList.add('opacity-100', 'pointer-events-auto');
-            } else {
-                panel.classList.remove('opacity-100', 'pointer-events-auto');
-                panel.classList.add('opacity-0', 'pointer-events-none');
+            panel.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-full', 'md:translate-y-0');
+            panel.classList.add('opacity-100', 'pointer-events-auto');
+            if (backdrop) {
+                backdrop.classList.remove('opacity-0', 'pointer-events-none');
+                backdrop.classList.add('opacity-100', 'pointer-events-auto');
             }
         }
 
         function closeSettingsPanel() {
             const panel = document.getElementById('settings-panel');
+            const backdrop = document.getElementById('settings-backdrop');
             if (!panel) return;
             panel.classList.remove('opacity-100', 'pointer-events-auto');
             panel.classList.add('opacity-0', 'pointer-events-none');
+            if (window.innerWidth < 768) {
+                panel.classList.add('translate-y-full');
+                panel.classList.remove('md:translate-y-0');
+            }
+            if (backdrop) {
+                backdrop.classList.remove('opacity-100', 'pointer-events-auto');
+                backdrop.classList.add('opacity-0', 'pointer-events-none');
+            }
+        }
+
+        function toggleSettings() {
+            settingsButtonClicked = true;
+            const panel = document.getElementById('settings-panel');
+            if (!panel) return;
+            const isVisible = !panel.classList.contains('opacity-0');
+            if (isVisible) {
+                closeSettingsPanel();
+            } else {
+                openSettingsPanel();
+            }
         }
 
         document.addEventListener('click', function(e) {
@@ -2118,9 +2221,10 @@
             }
             const panel = document.getElementById('settings-panel');
             const btn = document.getElementById('settings-btn');
+            const backdrop = document.getElementById('settings-backdrop');
             if (!panel || !btn) return;
             if (!panel.classList.contains('opacity-0')) {
-                if (!panel.contains(e.target) && !btn.contains(e.target)) {
+                if (!panel.contains(e.target) && !btn.contains(e.target) && !(backdrop && backdrop.contains(e.target))) {
                     closeSettingsPanel();
                 }
             }
@@ -2398,7 +2502,22 @@
         // ================================================================
         // TAB SWITCH
         // ================================================================
+        let currentTab = 't1';
+
+        function moveMobileTabIndicator(tabId) {
+            const indicator = document.getElementById('mtab-indicator');
+            const tab = document.getElementById('mtab-' + tabId);
+            const container = document.getElementById('mtab-container');
+            if (!indicator || !tab || !container) return;
+            const tabRect = tab.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const x = tabRect.left - containerRect.left;
+            indicator.style.width = tabRect.width + 'px';
+            indicator.style.transform = 'translateX(' + x + 'px)';
+        }
+
         function switchTab(tab) {
+            currentTab = tab;
             ['t1', 't2', 't3', 'quiz'].forEach(t => {
                 const v = document.getElementById('view-' + t);
                 const b = document.getElementById('tab-' + t);
@@ -2406,17 +2525,18 @@
                 if (t === tab) {
                     v.classList.remove('hidden');
                     if (b) b.className =
-                        'tab-btn active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5';
+                        'tab-btn press-subtle active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5';
                     if (m) m.className =
-                        'flex flex-col items-center gap-0.5 text-sky-600 dark:text-amber-400 text-[12px] font-bold';
+                        'press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-sky-600 dark:text-amber-400 text-[12px] font-bold';
                 } else {
                     v.classList.add('hidden');
                     if (b) b.className =
-                        'tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5';
+                        'tab-btn press-subtle px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5';
                     if (m) m.className =
-                        'flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400 text-[12px] font-bold';
+                        'press-subtle relative z-10 flex flex-col items-center gap-0.5 w-14 h-10 justify-center text-slate-500 dark:text-slate-400 text-[12px] font-bold';
                 }
             });
+            moveMobileTabIndicator(tab);
             
             // Show/hide header action buttons based on active tab
             const headerActions = document.getElementById('header-actions');
@@ -2598,7 +2718,7 @@
                 const cardCursor = (t1StudyMode && !isRevealed) ? 'cursor-pointer' : '';
                 const showBengali = t1ShowBengali;
                 
-                return `<div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-4 shadow-sm card-hover space-y-3 ${cardCursor}" ${cardClickHandler}>
+                return `<div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-4 shadow-sm card-hover space-y-3 ${cardCursor}" ${cardClickHandler}>
                     <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                         <div class="flex items-center gap-2"><span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300">#${d.id}</span><span class="text-4xl">${getT1Icon(d.keyword)}</span><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.keyword}</h3>${showBengali ? `<span class="text-[22px] text-slate-500 font-medium">${d.bn}</span>` : ''}</div>
                         <div class="flex items-center gap-1.5">
@@ -2650,7 +2770,7 @@
                 const speechParagraphs = d.speech.split('\n\n').filter(p => p.trim());
                 const bengaliParagraphs = d.speech_bn.split('\n\n').filter(p => p.trim());
                 
-                return `<div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-4 shadow-sm card-hover space-y-3">
+                return `<div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-4 shadow-sm card-hover space-y-3">
                     <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
                         <div class="flex items-center gap-2"><span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">#${d.id}</span><span class="text-4xl">${getT2Icon(d.topic)}</span><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.topic}</h3></div>
                         <button onclick="speakText('${d.speech.replace(/'/g,"\\'").replace(/\n/g,' ')}', this)" class="text-amber-400 hover:text-amber-300 p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
@@ -2728,7 +2848,7 @@
             document.getElementById('t3-count').textContent = filteredData.length;
             
             grid.innerHTML = filteredData.map((d, idx) =>
-                `<div class="bg-white dark:bg-ghSurface border border-slate-200 dark:border-ghBorder rounded-2xl p-4 shadow-sm card-hover space-y-3">
+                `<div class="bg-white dark:bg-ghSurface ring-1 ring-slate-900/5 dark:ring-white/5 rounded-2xl p-4 shadow-sm card-hover space-y-3">
                     <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-2">
                         <span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">প্রশ্ন ${d.id}</span>
                         <span class="t3-card-icon">${d.icon}</span>
@@ -3043,6 +3163,10 @@
             renderT3();
             resetQuiz();
 
+            // Initialize mobile tab pill indicator
+            requestAnimationFrame(() => moveMobileTabIndicator(currentTab));
+            window.addEventListener('resize', () => moveMobileTabIndicator(currentTab));
+
             // Hide all search wraps initially
             document.querySelectorAll('[id$="-search-wrap"]').forEach(wrap => {
                 wrap.classList.add('hidden');
@@ -3174,16 +3298,6 @@
                 
                 lastScrollY = currentScrollY;
             }, { passive: true });
-
-            // Close settings panel when clicking outside
-            document.addEventListener('click', (e) => {
-                const panel = document.getElementById('settings-panel');
-                const btn = document.getElementById('settings-btn');
-                if (panel && btn && !panel.contains(e.target) && !btn.contains(e.target)) {
-                    panel.classList.remove('opacity-100', 'pointer-events-auto');
-                    panel.classList.add('opacity-0', 'pointer-events-none');
-                }
-            });
         });
     </script>
 
