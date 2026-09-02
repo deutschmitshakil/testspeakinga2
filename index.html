@@ -181,39 +181,39 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-200 font-sans antialiased min-h-screen flex flex-col">
+<body class="bg-slate-50 text-slate-800 dark:bg-[#1c1c1e] dark:text-[#f5f5f7] transition-colors duration-200 font-sans antialiased min-h-screen flex flex-col">
 
     <!-- ========== TOAST ========== -->
-    <div id="toast" class="fixed top-20 right-4 z-50 pointer-events-none transform transition-all duration-300 translate-x-full opacity-0 bg-slate-900 dark:bg-amber-500 text-white dark:text-slate-950 text-base font-bold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700 dark:border-amber-400">
-        <i class="fa-solid fa-circle-check text-amber-400 dark:text-slate-950"></i>
+    <div id="toast" class="fixed top-20 right-4 z-50 pointer-events-none transform transition-all duration-300 translate-x-full opacity-0 bg-slate-900 dark:bg-white text-white dark:text-[#1c1c1e] text-base font-bold px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 border border-slate-700 dark:border-white">
+        <i class="fa-solid fa-circle-check text-white dark:text-[#1c1c1e]"></i>
         <span id="toast-msg">বার্তা</span>
     </div>
 
     <!-- ========== HEADER ========== -->
-    <header class="sticky top-0 z-40 bg-white/85 dark:bg-slate-900/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-slate-800/70 shadow-sm">
+    <header class="sticky top-0 z-40 bg-white/85 dark:bg-[#2d2d2d]/85 backdrop-blur-xl border-b border-slate-200/70 dark:border-[#3a3a3c]/70 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
 
                 <!-- Brand -->
                 <div class="flex items-center gap-3 cursor-pointer flex-1 min-w-0" onclick="switchTab('t1')">
-                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-amber-400 via-red-500 to-slate-900 flex items-center justify-center shadow-md">
+                    <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-white via-red-500 to-slate-900 flex items-center justify-center shadow-md">
                         <span class="text-lg">🇩🇪</span>
                     </div>
                     <div class="leading-tight min-w-0">
                         <div class="flex items-center gap-2">
                             <span class="brand-title font-extrabold text-slate-900 dark:text-white whitespace-nowrap">Deutsch mit Shakil</span>
-                            <span class="text-[13px] font-black px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300 border border-amber-300 dark:border-amber-800">A2</span>
+                            <span class="text-[13px] font-black px-2 py-0.5 rounded-full bg-white text-white dark:bg-white dark:text-white border border-white dark:border-white">A2</span>
                         </div>
-                        <p class="hidden sm:block text-[12px] text-slate-500 dark:text-slate-400 font-medium">Goethe A2 · Sprechen</p>
+                        <p class="hidden sm:block text-[12px] text-slate-500 dark:text-[#86868b] font-medium">Goethe A2 · Sprechen</p>
                     </div>
                 </div>
 
                 <!-- Desktop Tabs -->
-                <nav class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-slate-800/60 p-1 rounded-2xl border border-slate-200 dark:border-slate-700">
+                <nav class="hidden md:flex items-center gap-1 bg-slate-100 dark:bg-[#3a3a3c]/60 p-1 rounded-2xl border border-slate-200 dark:border-[#48484a]">
                     <button onclick="switchTab('t1')" id="tab-t1" class="tab-btn active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5"><i class="fa-solid fa-comment"></i><span>Teil 1</span></button>
-                    <button onclick="switchTab('t2')" id="tab-t2" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-microphone"></i><span>Teil 2</span></button>
-                    <button onclick="switchTab('t3')" id="tab-t3" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-handshake"></i><span>Teil 3</span></button>
-                    <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-amber-500"></i><span>Instruction</span></button>
+                    <button onclick="switchTab('t2')" id="tab-t2" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-[#86868b] hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-microphone"></i><span>Teil 2</span></button>
+                    <button onclick="switchTab('t3')" id="tab-t3" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-[#86868b] hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-handshake"></i><span>Teil 3</span></button>
+                    <button onclick="switchTab('quiz')" id="tab-quiz" class="tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-[#86868b] hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5"><i class="fa-solid fa-chalkboard-user text-white"></i><span>Instruction</span></button>
                 </nav>
 
                 <!-- Header Action Buttons & Setting -->
@@ -221,51 +221,51 @@
                     <!-- Header Action Buttons -->
                     <div id="header-actions" class="flex items-center gap-1.5">
                         <!-- T1 Translation -->
-                        <button id="t1-bengali-btn" onclick="toggleT1Bengali()" data-tab="t1" class="hdr-action-btn px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
+                        <button id="t1-bengali-btn" onclick="toggleT1Bengali()" data-tab="t1" class="hdr-action-btn px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                         <!-- T2 Timer -->
-                        <button id="t2-timer-btn" onclick="toggleT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Timer umschalten" title="Timer">
+                        <button id="t2-timer-btn" onclick="toggleT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center gap-1.5" aria-label="Timer umschalten" title="Timer">
                             <i class="fa-solid fa-clock"></i><span id="t2-timer-display">1:30</span>
                         </button>
                         <!-- T2 Timer Reset -->
-                        <button id="t2-timer-reset-btn" onclick="resetT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Timer zurücksetzen" title="Timer zurücksetzen">
+                        <button id="t2-timer-reset-btn" onclick="resetT2Timer()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center justify-center" aria-label="Timer zurücksetzen" title="Timer zurücksetzen">
                             <i class="fa-solid fa-rotate-left"></i>
                         </button>
                         <!-- T2 Translation -->
-                        <button id="t2-bengali-btn" onclick="toggleT2Bengali()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
+                        <button id="t2-bengali-btn" onclick="toggleT2Bengali()" data-tab="t2" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                         <!-- T3 Timer -->
-                        <button id="t3-timer-btn" onclick="toggleT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Timer umschalten" title="Timer">
+                        <button id="t3-timer-btn" onclick="toggleT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center gap-1.5" aria-label="Timer umschalten" title="Timer">
                             <i class="fa-solid fa-clock"></i><span id="t3-timer-display">3:00</span>
                         </button>
                         <!-- T3 Timer Reset -->
-                        <button id="t3-timer-reset-btn" onclick="resetT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Timer zurücksetzen" title="Timer zurücksetzen">
+                        <button id="t3-timer-reset-btn" onclick="resetT3Timer()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center justify-center" aria-label="Timer zurücksetzen" title="Timer zurücksetzen">
                             <i class="fa-solid fa-rotate-left"></i>
                         </button>
                         <!-- T3 Translation -->
-                        <button id="t3-bengali-btn" onclick="toggleT3Bengali()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
+                        <button id="t3-bengali-btn" onclick="toggleT3Bengali()" data-tab="t3" class="hdr-action-btn hidden px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center justify-center" aria-label="Translation umschalten" title="Translation">
                             <i class="fa-solid fa-language"></i>
                         </button>
                     </div>
                     <!-- Setting Button & Panel -->
                     <div class="relative shrink-0">
-                        <button id="settings-btn" onclick="toggleSettings()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-700 flex items-center justify-center transition" aria-label="Einstellungen">
-                            <i class="fa-solid fa-cog text-slate-500 dark:text-amber-400"></i>
+                        <button id="settings-btn" onclick="toggleSettings()" class="w-9 h-9 rounded-xl bg-slate-100 dark:bg-[#3a3a3c] hover:bg-slate-200 dark:hover:bg-slate-700 text-slate-600 dark:text-white border border-slate-200 dark:border-[#48484a] flex items-center justify-center transition" aria-label="Einstellungen">
+                            <i class="fa-solid fa-cog text-slate-500 dark:text-white"></i>
                         </button>
                         <!-- Settings Panel -->
-                        <div id="settings-panel" class="absolute right-0 top-14 w-48 bg-white dark:bg-slate-800 rounded-xl shadow-lg p-4 opacity-0 pointer-events-none transition-all duration-200 border border-slate-200 dark:border-slate-700 z-50">
+                        <div id="settings-panel" class="absolute right-0 top-14 w-48 bg-white dark:bg-[#3a3a3c] rounded-xl shadow-lg p-4 opacity-0 pointer-events-none transition-all duration-200 border border-slate-200 dark:border-[#48484a] z-50">
                             <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Dark Mode</label>
-                                <button onclick="toggleTheme()" class="w-full h-9 rounded-xl bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-amber-400 border border-slate-200 dark:border-slate-600 flex items-center justify-center transition">
+                                <label class="block text-[12px] font-bold text-slate-600 dark:text-[#a1a1a6] mb-1">Dark Mode</label>
+                                <button onclick="toggleTheme()" class="w-full h-9 rounded-xl bg-slate-100 dark:bg-[#3a3a3c] text-slate-600 dark:text-white border border-slate-200 dark:border-[#48484a] flex items-center justify-center transition">
                                     <i class="fa-solid fa-moon dark:hidden"></i>
                                     <i class="fa-solid fa-sun hidden dark:block"></i>
                                 </button>
                             </div>
                             <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Seitenzoom</label>
-                                <select id="page-zoom" onchange="changePageZoom(this.value)" aria-label="Page zoom" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+                                <label class="block text-[12px] font-bold text-slate-600 dark:text-[#a1a1a6] mb-1">Seitenzoom</label>
+                                <select id="page-zoom" onchange="changePageZoom(this.value)" aria-label="Page zoom" class="w-full bg-slate-50 dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#48484a] rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-[#e5e5e5] focus:outline-none focus:ring-2 focus:ring-white">
                                     <option value="45">50%</option>
                                     <option value="60">80%</option>
                                     <option value="80" selected>100%</option>
@@ -274,8 +274,8 @@
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label class="block text-[12px] font-bold text-slate-600 dark:text-slate-300 mb-1">Audio-Geschwindigkeit</label>
-                                <select id="tts-speed" onchange="setTtsSpeed(this.value)" aria-label="Audio speed" class="w-full bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-slate-200 focus:outline-none focus:ring-2 focus:ring-amber-400">
+                                <label class="block text-[12px] font-bold text-slate-600 dark:text-[#a1a1a6] mb-1">Audio-Geschwindigkeit</label>
+                                <select id="tts-speed" onchange="setTtsSpeed(this.value)" aria-label="Audio speed" class="w-full bg-slate-50 dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#48484a] rounded-xl px-2 py-1.5 text-[12px] font-bold text-slate-700 dark:text-[#e5e5e5] focus:outline-none focus:ring-2 focus:ring-white">
                                     <option value="0.6">0.6x</option>
                                     <option value="0.8">0.8x</option>
                                     <option value="1.0" selected>1.0x</option>
@@ -290,11 +290,11 @@
         </div>
 
         <!-- Mobile Tabs -->
-        <div class="md:hidden flex items-center justify-around bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-1.5 text-[12px] font-bold">
-            <button onclick="switchTab('t1')" id="mtab-t1" class="flex flex-col items-center gap-0.5 text-sky-600 dark:text-amber-400"><i class="fa-solid fa-comment text-lg"></i><span>Teil 1</span></button>
-            <button onclick="switchTab('t2')" id="mtab-t2" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400"><i class="fa-solid fa-microphone text-lg"></i><span>Teil 2</span></button>
-            <button onclick="switchTab('t3')" id="mtab-t3" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400"><i class="fa-solid fa-handshake text-lg"></i><span>Teil 3</span></button>
-            <button onclick="switchTab('quiz')" id="mtab-quiz" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400"><i class="fa-solid fa-chalkboard-user text-lg text-amber-500"></i><span>Instruction</span></button>
+        <div class="md:hidden flex items-center justify-around bg-white dark:bg-[#2d2d2d] border-t border-slate-200 dark:border-[#3a3a3c] py-1.5 text-[12px] font-bold">
+            <button onclick="switchTab('t1')" id="mtab-t1" class="flex flex-col items-center gap-0.5 text-sky-600 dark:text-white"><i class="fa-solid fa-comment text-lg"></i><span>Teil 1</span></button>
+            <button onclick="switchTab('t2')" id="mtab-t2" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-[#86868b]"><i class="fa-solid fa-microphone text-lg"></i><span>Teil 2</span></button>
+            <button onclick="switchTab('t3')" id="mtab-t3" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-[#86868b]"><i class="fa-solid fa-handshake text-lg"></i><span>Teil 3</span></button>
+            <button onclick="switchTab('quiz')" id="mtab-quiz" class="flex flex-col items-center gap-0.5 text-slate-500 dark:text-[#86868b]"><i class="fa-solid fa-chalkboard-user text-lg text-white"></i><span>Instruction</span></button>
         </div>
     </header>
 
@@ -306,28 +306,28 @@
         <!-- ============================================================ -->
         <section id="view-t1" class="space-y-5">
 
-            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+            <div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-5 shadow-sm">
                 <div class="mb-4">
                     <h2 class="text-lg font-extrabold text-slate-900 dark:text-white">Fragen stellen & Antworten</h2>
-                    <p class="text-base text-slate-600 dark:text-slate-400">৪টি কার্ড · প্রশ্ন করুন ও উত্তর দিন</p>
+                    <p class="text-base text-slate-600 dark:text-[#86868b]">৪টি কার্ড · প্রশ্ন করুন ও উত্তর দিন</p>
                 </div>
                 <!-- Search, Sort, Study Mode, Bookmark in one row -->
                 <div class="flex items-center gap-2">
                     <span id="t1-count" class="badge-count mr-auto">113</span>
-                    <button id="t1-search-btn" onclick="toggleT1Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Suchen" title="Suchen">
+                    <button id="t1-search-btn" onclick="toggleT1Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Suchen" title="Suchen">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <div id="t1-search-wrap" class="hidden">
-                        <input id="t1-search" type="search" oninput="renderT1()" placeholder="Suchen..." aria-label="Teil 1 durchsuchen" class="w-32 sm:w-40 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400" />
+                        <input id="t1-search" type="search" oninput="renderT1()" placeholder="Suchen..." aria-label="Teil 1 durchsuchen" class="w-32 sm:w-40 bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] rounded-xl px-3 py-2 text-base text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-white" />
                     </div>
-                    <select id="t1-sort" onchange="renderT1()" aria-label="Teil 1 sortieren" class="w-24 sm:w-32 max-w-xs bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400"><option value="id">1-113</option><option value="az">A bis Z</option><option value="za">Z bis A</option></select>
+                    <select id="t1-sort" onchange="renderT1()" aria-label="Teil 1 sortieren" class="w-24 sm:w-32 max-w-xs bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-white"><option value="id">1-113</option><option value="az">A bis Z</option><option value="za">Z bis A</option></select>
                     <!-- Study Mode Toggle - shows eye only on mobile -->
-                    <button id="t1-study-btn" onclick="toggleT1StudyMode()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5" aria-label="Study Mode umschalten">
+                    <button id="t1-study-btn" onclick="toggleT1StudyMode()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center gap-1.5" aria-label="Study Mode umschalten">
                         <i class="fa-solid fa-eye"></i>
                         <span class="hidden sm:block">Study Mode</span>
                     </button>
                     <!-- Bookmark Filter -->
-                    <button id="t1-bookmark-btn" onclick="toggleT1BookmarkFilter()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-amber-100 dark:hover:bg-amber-900/30 hover:text-amber-700 dark:hover:text-amber-300 flex items-center gap-1.5 justify-center" aria-label="Lesezeichen filtern">
+                    <button id="t1-bookmark-btn" onclick="toggleT1BookmarkFilter()" class="px-2 py-1.5 rounded-xl text-[12px] font-bold transition-all bg-slate-100 dark:bg-[#3a3a3c] border border-slate-200 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-white dark:hover:bg-white hover:text-white dark:hover:text-white flex items-center gap-1.5 justify-center" aria-label="Lesezeichen filtern">
                         <i class="fa-solid fa-bookmark text-lg"></i>
                     </button>
                 </div>
@@ -342,21 +342,21 @@
         <!-- ============================================================ -->
         <section id="view-t2" class="hidden space-y-5">
 
-            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+            <div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-5 shadow-sm">
                 <div class="mb-4">
-                    <div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-[12px] font-black bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">Teil 2</span><h2 class="t2-heading text-lg font-extrabold text-slate-900 dark:text-white">Monolog · Speech</h2></div>
-                    <p class="t2-subheading bangla-t2-t3 text-base text-slate-600 dark:text-slate-400">প্রায় ১.৫ মিনিট · বিষয়ভিত্তিক বক্তৃতা</p>
+                    <div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-[12px] font-black bg-white text-white dark:bg-white dark:text-white">Teil 2</span><h2 class="t2-heading text-lg font-extrabold text-slate-900 dark:text-white">Monolog · Speech</h2></div>
+                    <p class="t2-subheading bangla-t2-t3 text-base text-slate-600 dark:text-[#86868b]">প্রায় ১.৫ মিনিট · বিষয়ভিত্তিক বক্তৃতা</p>
                 </div>
                 <!-- Search, Sort in one row -->
                 <div class="flex items-center gap-2 flex-wrap">
                     <span id="t2-count" class="badge-count mr-auto">25</span>
-                    <button id="t2-search-btn" onclick="toggleT2Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Suchen" title="Suchen">
+                    <button id="t2-search-btn" onclick="toggleT2Search()" class="w-9 h-9 rounded-xl bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] text-slate-700 dark:text-[#e5e5e5] hover:bg-slate-100 dark:hover:bg-slate-800 flex items-center justify-center transition" aria-label="Suchen" title="Suchen">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
                     <div id="t2-search-wrap" class="hidden">
-                        <input id="t2-search" type="search" oninput="renderT2()" placeholder="Suchen..." aria-label="Teil 2 durchsuchen" class="w-32 sm:w-40 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400" />
+                        <input id="t2-search" type="search" oninput="renderT2()" placeholder="Suchen..." aria-label="Teil 2 durchsuchen" class="w-32 sm:w-40 bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] rounded-xl px-3 py-2 text-base text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-white" />
                     </div>
-                    <select id="t2-sort" onchange="renderT2()" aria-label="Teil 2 sortieren" class="t2-control w-24 sm:w-32 max-w-xs bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400"><option value="id">1-25</option><option value="az">A bis Z</option><option value="za">Z bis A</option></select>
+                    <select id="t2-sort" onchange="renderT2()" aria-label="Teil 2 sortieren" class="t2-control w-24 sm:w-32 max-w-xs bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-white"><option value="id">1-25</option><option value="az">A bis Z</option><option value="za">Z bis A</option></select>
                 </div>
             </div>
 
@@ -369,13 +369,13 @@
         <!-- ============================================================ -->
         <section id="view-t3" class="hidden space-y-5">
 
-            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-5 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div>
                     <div class="flex items-center gap-2"><span class="px-2.5 py-0.5 rounded-full text-[12px] font-black bg-emerald-100 text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300">Teil 3</span><h2 class="text-lg font-extrabold text-slate-900 dark:text-white">Gemeinsam planen</h2></div>
-                    <p class="bangla-t2-t3 text-base text-slate-600 dark:text-slate-400">পার্টনারের সাথে যৌথ পরিকল্পনা ও আলোচনার মাধ্যমে সময় ও সিদ্ধান্ত নির্ধারণ · Partnerarbeit</p>
+                    <p class="bangla-t2-t3 text-base text-slate-600 dark:text-[#86868b]">পার্টনারের সাথে যৌথ পরিকল্পনা ও আলোচনার মাধ্যমে সময় ও সিদ্ধান্ত নির্ধারণ · Partnerarbeit</p>
                 </div>
                 <div class="flex items-center gap-2">
-                    <select id="t3-topic-select" onchange="renderT3()" aria-label="Thema filtern" class="w-48 sm:w-72 bg-slate-50 dark:bg-slate-950 border border-slate-300 dark:border-slate-700 rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-amber-400">
+                    <select id="t3-topic-select" onchange="renderT3()" aria-label="Thema filtern" class="w-48 sm:w-72 bg-slate-50 dark:bg-[#1c1c1e] border border-slate-300 dark:border-[#48484a] rounded-xl px-3 py-2 text-base font-bold text-slate-800 dark:text-white focus:outline-none focus:ring-2 focus:ring-white">
                         <option value="all">All Topics</option>
                     </select>
                     <span id="t3-count" class="badge-count">5</span>
@@ -401,10 +401,10 @@
                     <span class="text-lg font-black text-sky-600 dark:text-sky-400">১.১</span>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white bangla-t2-t3">Sprechen Teil 1-এ কী করতে হয়?</h3>
-                        <p class="text-base text-slate-600 dark:text-slate-400 bangla-t2-t3">পরীক্ষার ফরম্যাট এবং নিয়মাবলি</p>
+                        <p class="text-base text-slate-600 dark:text-[#86868b] bangla-t2-t3">পরীক্ষার ফরম্যাট এবং নিয়মাবলি</p>
                     </div>
                 </div>
-                <p class="text-base text-slate-800 dark:text-slate-200 bangla-t2-t3 leading-relaxed">Goethe-Zertifikat A2 জার্মান পরীক্ষার Sprechen Teil 1-এ Full Marks পাওয়ার জন্য আপনাকে কিছু নির্দিষ্ট নিয়ম এবং কৌশল মেনে চলতে হবে। এই পার্টটি মূলত আপনার পার্টনারের সাথে কথোপকথনের ওপর ভিত্তি করে তৈরি।</p>
+                <p class="text-base text-slate-800 dark:text-[#e5e5e5] bangla-t2-t3 leading-relaxed">Goethe-Zertifikat A2 জার্মান পরীক্ষার Sprechen Teil 1-এ Full Marks পাওয়ার জন্য আপনাকে কিছু নির্দিষ্ট নিয়ম এবং কৌশল মেনে চলতে হবে। এই পার্টটি মূলত আপনার পার্টনারের সাথে কথোপকথনের ওপর ভিত্তি করে তৈরি।</p>
 
                 <!-- 3 Info Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -414,15 +414,15 @@
                             <i class="fa-solid fa-id-card text-2xl text-sky-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white">৪টি কার্ড (Wortkarten)</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">প্রতিটি কার্ডে একটি করে জার্মান শব্দ (Beruf, Thema, Sport, Reisen, Wochenende, Frühstück ইত্যাদি) লেখা থাকবে। কোনো লিখিত প্রস্তুতির সময় দেওয়া হয় না।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">প্রতিটি কার্ডে একটি করে জার্মান শব্দ (Beruf, Thema, Sport, Reisen, Wochenende, Frühstück ইত্যাদি) লেখা থাকবে। কোনো লিখিত প্রস্তুতির সময় দেওয়া হয় না।</p>
                     </div>
                     <!-- Card 2 -->
-                    <div class="bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/50 rounded-2xl p-4 space-y-2">
+                    <div class="bg-white dark:bg-white/20 border border-white dark:border-white rounded-2xl p-4 space-y-2">
                         <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-hourglass-end text-2xl text-amber-600"></i>
+                            <i class="fa-solid fa-hourglass-end text-2xl text-white"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white">২০ সেকেন্ড সময়</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">কার্ড হাতে পাওয়ার পর প্রায় ২০ সেকেন্ডের মধ্যে আপনাকে প্রশ্ন সাজাতে হবে।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">কার্ড হাতে পাওয়ার পর প্রায় ২০ সেকেন্ডের মধ্যে আপনাকে প্রশ্ন সাজাতে হবে।</p>
                     </div>
                     <!-- Card 3 -->
                     <div class="bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 rounded-2xl p-4 space-y-2">
@@ -430,10 +430,10 @@
                             <i class="fa-solid fa-star text-2xl text-emerald-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white">৪ নম্বর</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">প্রতিটি সঠিক প্রশ্ন ও প্রাসঙ্গিক উত্তরের জন্য ১ নম্বর করে - মোট ৪ নম্বর।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">প্রতিটি সঠিক প্রশ্ন ও প্রাসঙ্গিক উত্তরের জন্য ১ নম্বর করে - মোট ৪ নম্বর।</p>
                     </div>
                 </div>
-                <p class="text-base text-slate-700 dark:text-slate-200 bangla-t2-t3 leading-relaxed">আপনার কার্ডের শব্দগুলো ব্যবহার করে আপনার পার্টনারকে (অন্য পরীক্ষার্থীকে) ৪টি প্রশ্ন করতে হবে এবং সে যখন আপনাকে প্রশ্ন করবে, তখন আপনাকে ৪টি উত্তর দিতে হবে।</p>
+                <p class="text-base text-slate-700 dark:text-[#e5e5e5] bangla-t2-t3 leading-relaxed">আপনার কার্ডের শব্দগুলো ব্যবহার করে আপনার পার্টনারকে (অন্য পরীক্ষার্থীকে) ৪টি প্রশ্ন করতে হবে এবং সে যখন আপনাকে প্রশ্ন করবে, তখন আপনাকে ৪টি উত্তর দিতে হবে।</p>
             </div>
 
             <!-- Section 1.2 -->
@@ -442,7 +442,7 @@
                     <span class="text-lg font-black text-sky-600 dark:text-sky-400">১.২</span>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white bangla-t2-t3">কীভাবে প্রশ্ন করবেন? (How to ask questions)</h3>
-                        <p class="text-base text-slate-600 dark:text-slate-400 bangla-t2-t3">ব্যাকরণগত সঠিকতা এবং প্রশ্নের কাঠামো</p>
+                        <p class="text-base text-slate-600 dark:text-[#86868b] bangla-t2-t3">ব্যাকরণগত সঠিকতা এবং প্রশ্নের কাঠামো</p>
                     </div>
                 </div>
 
@@ -452,44 +452,44 @@
                         <i class="fa-solid fa-triangle-exclamation text-2xl text-red-600"></i>
                         <h4 class="text-base font-bold text-slate-900 dark:text-white bangla-t2-t3">অত্যন্ত গুরুত্বপূর্ণ নিয়ম: Du বা Sie Consistency</h4>
                     </div>
-                    <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3 leading-relaxed">পুরো পরীক্ষায় হয় সবাইকে <b>Du</b> (তুমি) বলে সম্বোধন করবেন, অথবা সবাইকে <b>Sie</b> (আপনি) বলে সম্বোধন করবেন। কথা বলার মাঝখানে কখনো du থেকে হঠাৎ Sie-তে (বা উল্টোটা) পরিবর্তন করবেন না। পরীক্ষার শুরুতে আপনার পার্টনারের সাথে কথা বলে ঠিক করে নিন যে আপনারা একে অপরকে কী বলে ডাকবেন।</p>
+                    <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3 leading-relaxed">পুরো পরীক্ষায় হয় সবাইকে <b>Du</b> (তুমি) বলে সম্বোধন করবেন, অথবা সবাইকে <b>Sie</b> (আপনি) বলে সম্বোধন করবেন। কথা বলার মাঝখানে কখনো du থেকে হঠাৎ Sie-তে (বা উল্টোটা) পরিবর্তন করবেন না। পরীক্ষার শুরুতে আপনার পার্টনারের সাথে কথা বলে ঠিক করে নিন যে আপনারা একে অপরকে কী বলে ডাকবেন।</p>
                 </div>
 
-                <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">স্পিকিং পরীক্ষায় প্রশ্ন করার সময় ব্যাকরণগত সঠিকতা অত্যন্ত গুরুত্বপূর্ণ। নিচে du এবং Sie ফরম্যাটের প্রশ্ন কাঠামো দেওয়া হলো:</p>
+                <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">স্পিকিং পরীক্ষায় প্রশ্ন করার সময় ব্যাকরণগত সঠিকতা অত্যন্ত গুরুত্বপূর্ণ। নিচে du এবং Sie ফরম্যাটের প্রশ্ন কাঠামো দেওয়া হলো:</p>
 
                 <!-- Two column layout for question types -->
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
                     <!-- W-Fragen -->
-                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 space-y-3">
+                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-[#3a3a3c]/50 dark:to-[#2d2d2d]/50 border border-slate-200 dark:border-[#48484a] rounded-2xl p-5 space-y-3">
                         <h4 class="text-base font-black text-sky-700 dark:text-sky-400 uppercase">❓ W-Fragen</h4>
                         <h5 class="text-base font-bold text-slate-900 dark:text-white">Was, Wann, Wo, Wie, Warum, Wohin</h5>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">প্রশ্নটি এই শব্দগুলো দিয়ে শুরু হলে ক্রিয়াপদ (Verb) সর্বদা ২য় স্থানে বসবে।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">প্রশ্নটি এই শব্দগুলো দিয়ে শুরু হলে ক্রিয়াপদ (Verb) সর্বদা ২য় স্থানে বসবে।</p>
                         <div class="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-xl p-3">
                             <p class="text-[13px] font-bold text-blue-700 dark:text-blue-400 uppercase mb-1">অনানুষ্ঠানিক (Du): reist du</p>
-                            <p class="text-base text-slate-800 dark:text-slate-200 font-mono">Wohin reist du am liebsten?</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3 mt-2">তুমি কোথায় ঘুরতে যেতে সবচেয়ে বেশি পছন্দ করো?</p>
+                            <p class="text-base text-slate-800 dark:text-[#e5e5e5] font-mono">Wohin reist du am liebsten?</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3 mt-2">তুমি কোথায় ঘুরতে যেতে সবচেয়ে বেশি পছন্দ করো?</p>
                         </div>
                         <div class="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-900 rounded-xl p-3">
                             <p class="text-[13px] font-bold text-blue-700 dark:text-blue-400 uppercase mb-1">আনুষ্ঠানিক (Sie): reisen Sie</p>
-                            <p class="text-base text-slate-800 dark:text-slate-200 font-mono">Wohin reisen Sie am liebsten?</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3 mt-2">আপনি কোথায় ঘুরতে যেতে সবচেয়ে বেশি পছন্দ করেন?</p>
+                            <p class="text-base text-slate-800 dark:text-[#e5e5e5] font-mono">Wohin reisen Sie am liebsten?</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3 mt-2">আপনি কোথায় ঘুরতে যেতে সবচেয়ে বেশি পছন্দ করেন?</p>
                         </div>
                     </div>
 
                     <!-- Ja/Nein-Fragen -->
-                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800/50 dark:to-slate-900/50 border border-slate-200 dark:border-slate-700 rounded-2xl p-5 space-y-3">
+                    <div class="bg-gradient-to-br from-slate-50 to-slate-100 dark:from-[#3a3a3c]/50 dark:to-[#2d2d2d]/50 border border-slate-200 dark:border-[#48484a] rounded-2xl p-5 space-y-3">
                         <h4 class="text-base font-black text-emerald-700 dark:text-emerald-400 uppercase">✔️ Ja/Nein-Fragen</h4>
                         <h5 class="text-base font-bold text-slate-900 dark:text-white">ক্রিয়াপদ দিয়ে শুরু</h5>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">প্রশ্নটি ক্রিয়াপদ (Verb) দিয়ে শুরু করলে ক্রিয়াপদটি একদম ১ম স্থানে বসবে।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">প্রশ্নটি ক্রিয়াপদ (Verb) দিয়ে শুরু করলে ক্রিয়াপদটি একদম ১ম স্থানে বসবে।</p>
                         <div class="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900 rounded-xl p-3">
                             <p class="text-[13px] font-bold text-emerald-700 dark:text-emerald-400 uppercase mb-1">অনানুষ্ঠানিক (Du): Machst du</p>
-                            <p class="text-base text-slate-800 dark:text-slate-200 font-mono">Machst du gern Sport?</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3 mt-2">তুমি কি খেলাধুলা করতে পছন্দ করো?</p>
+                            <p class="text-base text-slate-800 dark:text-[#e5e5e5] font-mono">Machst du gern Sport?</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3 mt-2">তুমি কি খেলাধুলা করতে পছন্দ করো?</p>
                         </div>
                         <div class="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900 rounded-xl p-3">
                             <p class="text-[13px] font-bold text-emerald-700 dark:text-emerald-400 uppercase mb-1">আনুষ্ঠানিক (Sie): Machen Sie</p>
-                            <p class="text-base text-slate-800 dark:text-slate-200 font-mono">Machen Sie gern Sport?</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3 mt-2">আপনি কি খেলাধুলা করতে পছন্দ করেন?</p>
+                            <p class="text-base text-slate-800 dark:text-[#e5e5e5] font-mono">Machen Sie gern Sport?</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3 mt-2">আপনি কি খেলাধুলা করতে পছন্দ করেন?</p>
                         </div>
                     </div>
                 </div>
@@ -501,7 +501,7 @@
                     <span class="text-lg font-black text-sky-600 dark:text-sky-400">১.৩</span>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white bangla-t2-t3">কীভাবে উত্তর দেবেন? (How to answer)</h3>
-                        <p class="text-base text-slate-600 dark:text-slate-400 bangla-t2-t3">উত্তরের গভীরতা এবং সম্পূর্ণ নম্বর পাওয়ার রহস্য</p>
+                        <p class="text-base text-slate-600 dark:text-[#86868b] bangla-t2-t3">উত্তরের গভীরতা এবং সম্পূর্ণ নম্বর পাওয়ার রহস্য</p>
                     </div>
                 </div>
 
@@ -510,7 +510,7 @@
                         <i class="fa-solid fa-lightbulb text-xl text-green-600 dark:text-green-400 shrink-0 mt-0.5"></i>
                         <div>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white bangla-t2-t3">কখনও এক শব্দে উত্তর দেবেন না!</h4>
-                            <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3 mt-1">ফুল মার্কস পাওয়ার প্রধান চাবিকাঠি হলো আপনার উত্তরের গভীরতা। পরীক্ষক দেখতে চান আপনি A2 লেভেলের বাক্য গঠন করতে পারেন কিনা। পার্টনার প্রশ্ন করলে শুধু "Ja" বা "Nein" বলে থেমে যাবেন না - ২ থেকে ৩টি সম্পূর্ণ বাক্যে অর্থপূর্ণভাবে উত্তরটি বিস্তারিত বলুন।</p>
+                            <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3 mt-1">ফুল মার্কস পাওয়ার প্রধান চাবিকাঠি হলো আপনার উত্তরের গভীরতা। পরীক্ষক দেখতে চান আপনি A2 লেভেলের বাক্য গঠন করতে পারেন কিনা। পার্টনার প্রশ্ন করলে শুধু "Ja" বা "Nein" বলে থেমে যাবেন না - ২ থেকে ৩টি সম্পূর্ণ বাক্যে অর্থপূর্ণভাবে উত্তরটি বিস্তারিত বলুন।</p>
                         </div>
                     </div>
 
@@ -518,15 +518,15 @@
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div class="bg-red-50 dark:bg-red-950/20 border border-red-200 dark:border-red-900/50 rounded-xl p-4 space-y-2">
                             <h5 class="text-base font-bold text-red-700 dark:text-red-400 bangla-t2-t3">❌ ভুল / কম নম্বর পাওয়ার উত্তর</h5>
-                            <p class="text-base font-mono text-slate-800 dark:text-slate-200">Hast du Geschwister?</p>
+                            <p class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Hast du Geschwister?</p>
                             <p class="text-base font-bold text-red-900 dark:text-red-200">Ja, einen Bruder.</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3">(হ্যাঁ, এক ভাই।)</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3">(হ্যাঁ, এক ভাই।)</p>
                         </div>
                         <div class="bg-green-50 dark:bg-green-950/20 border border-green-200 dark:border-green-900/50 rounded-xl p-4 space-y-2">
                             <h5 class="text-base font-bold text-green-700 dark:text-green-400 bangla-t2-t3">✅ সম্পূর্ণ নম্বর (Full Marks) পাওয়ার উত্তর</h5>
-                            <p class="text-base font-mono text-slate-800 dark:text-slate-200">Hast du Geschwister?</p>
+                            <p class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Hast du Geschwister?</p>
                             <p class="text-base font-bold text-green-900 dark:text-green-200">Ja, ich habe eine ältere Schwester und einen Bruder. Meine Schwester studiert Medizin und mein Bruder geht noch zur Schule.</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3">(হ্যাঁ, আমার একটি বড় বোন এবং এক ভাই আছে। আমার বোন চিকিৎসাবিদ্যা পড়ছে এবং আমার ভাই এখনও স্কুলে যায়।)</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3">(হ্যাঁ, আমার একটি বড় বোন এবং এক ভাই আছে। আমার বোন চিকিৎসাবিদ্যা পড়ছে এবং আমার ভাই এখনও স্কুলে যায়।)</p>
                         </div>
                     </div>
                 </div>
@@ -535,10 +535,10 @@
             <!-- Section 1.4 -->
             <div class="space-y-4">
                 <div class="flex items-start gap-3">
-                    <span class="text-lg font-black text-amber-600 dark:text-amber-400">১.৪</span>
+                    <span class="text-lg font-black text-white dark:text-white">১.৪</span>
                     <div class="flex-1">
                         <h3 class="text-lg font-bold text-slate-900 dark:text-white bangla-t2-t3">কোন বিষয়গুলোতে অত্যন্ত সতর্ক থাকবেন?</h3>
-                        <p class="text-base text-slate-600 dark:text-slate-400 bangla-t2-t3">সতর্কতা, শোনা, উচ্চারণ এবং ব্যাকরণ</p>
+                        <p class="text-base text-slate-600 dark:text-[#86868b] bangla-t2-t3">সতর্কতা, শোনা, উচ্চারণ এবং ব্যাকরণ</p>
                     </div>
                 </div>
 
@@ -550,11 +550,11 @@
                             <i class="fa-solid fa-triangle-exclamation text-2xl text-orange-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white text-base bangla-t2-t3">ক) প্রশ্ন না বুঝলে ঘাবড়াবেন না</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">পার্টনার যদি এমন প্রশ্ন করে যা বুঝতে পারেননি, তবে আন্দাজে ভুল উত্তর দেবেন না। ভদ্রভাবে জার্মানে আবার বলতে বলুন - এতে কোনো নম্বর কাটা যায় না:</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">পার্টনার যদি এমন প্রশ্ন করে যা বুঝতে পারেননি, তবে আন্দাজে ভুল উত্তর দেবেন না। ভদ্রভাবে জার্মানে আবার বলতে বলুন - এতে কোনো নম্বর কাটা যায় না:</p>
                         <ul class="space-y-1.5">
-                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-slate-200">Kannst du das bitte wiederholen?</span></li>
-                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-slate-200">Ich habe das nicht verstanden.</span></li>
-                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-slate-200">Sprich bitte etwas langsamer!</span></li>
+                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Kannst du das bitte wiederholen?</span></li>
+                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Ich habe das nicht verstanden.</span></li>
+                            <li class="bg-orange-100/60 dark:bg-orange-900/30 rounded-lg px-3 py-1.5"><span class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Sprich bitte etwas langsamer!</span></li>
                         </ul>
                     </div>
 
@@ -564,7 +564,7 @@
                             <i class="fa-solid fa-ear-listen text-2xl text-purple-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white text-base bangla-t2-t3">খ) পার্টনারের কথা মনোযোগ দিয়ে শুনুন</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">পার্টনার আপনাকে কী প্রশ্ন করছে তা মনোযোগ দিয়ে শুনুন যাতে উত্তর সর্বদা প্রাসঙ্গিক হয়। প্রশ্ন এক লাইনে হলেও নিজের থেকে অতিরিক্ত তথ্য যোগ করে উত্তরের বাক্য বড় করুন।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">পার্টনার আপনাকে কী প্রশ্ন করছে তা মনোযোগ দিয়ে শুনুন যাতে উত্তর সর্বদা প্রাসঙ্গিক হয়। প্রশ্ন এক লাইনে হলেও নিজের থেকে অতিরিক্ত তথ্য যোগ করে উত্তরের বাক্য বড় করুন।</p>
                     </div>
 
                     <!-- গ) উচ্চারণ ও সুর -->
@@ -573,7 +573,7 @@
                             <i class="fa-solid fa-volume-high text-2xl text-blue-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white text-base bangla-t2-t3">গ) উচ্চারণ এবং সুর (Aussprache &amp; Satzmelodie)</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">কথা বলার সময় শব্দের সঠিক উচ্চারণ ও বাক্যের বাচনভঙ্গি বজায় রাখুন, যাতে আপনার কথা পরিষ্কার ও স্পষ্ট হয় এবং পরীক্ষকরা সহজেই বুঝতে পারেন।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">কথা বলার সময় শব্দের সঠিক উচ্চারণ ও বাক্যের বাচনভঙ্গি বজায় রাখুন, যাতে আপনার কথা পরিষ্কার ও স্পষ্ট হয় এবং পরীক্ষকরা সহজেই বুঝতে পারেন।</p>
                     </div>
 
                     <!-- ঘ) ক্রিয়াপদের রূপান্তর -->
@@ -582,46 +582,46 @@
                             <i class="fa-solid fa-spell-check text-2xl text-teal-600"></i>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white text-base bangla-t2-t3">ঘ) ক্রিয়াপদের রূপান্তর (Verb Conjugation)</h4>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3">ক্রিয়াপদের সঠিক রূপ ব্যবহার করতে ভুলবেন না - যেমন: <span class="font-mono text-slate-800 dark:text-slate-200">ich wohne, du wohnst, er wohnt</span>। </p> A2 লেভেলে ছোটখাটো ব্যাকরণগত ভুল কঠোরভাবে দেখা হয় না, তবে বাক্যটি যেন বোধগম্য হয়। </p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">ক্রিয়াপদের সঠিক রূপ ব্যবহার করতে ভুলবেন না - যেমন: <span class="font-mono text-slate-800 dark:text-[#e5e5e5]">ich wohne, du wohnst, er wohnt</span>। </p> A2 লেভেলে ছোটখাটো ব্যাকরণগত ভুল কঠোরভাবে দেখা হয় না, তবে বাক্যটি যেন বোধগম্য হয়। </p>
                     </div>
                 </div>
             </div>
 
             <!-- Important Note -->
-            <div class="bg-gradient-to-r from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 border border-amber-200 dark:border-amber-900/50 rounded-2xl p-6 space-y-3">
+            <div class="bg-gradient-to-r from-white to-white dark:from-white/20 dark:to-white/20 border border-white dark:border-white rounded-2xl p-6 space-y-3">
                 <div class="flex items-start gap-3">
-                    <i class="fa-solid fa-circle-info text-2xl text-amber-600 shrink-0 mt-1"></i>
+                    <i class="fa-solid fa-circle-info text-2xl text-white shrink-0 mt-1"></i>
                     <div class="flex-1 space-y-3">
                         <div>
                             <h4 class="text-base font-bold text-slate-900 dark:text-white bangla-t2-t3 mb-2">পার্টনার নার্ভাস হয়ে ব্ল্যাংক হয়ে গেলে?</h4>
-                            <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3 leading-relaxed">পরীক্ষায় পার্টনার যদি নার্ভাস হয়ে ব্ল্যাংক হয়ে যান বা একদমই কথা বলতে না পারেন, তবে এটি নিয়ে ঘাবড়ানোর কিছু নেই - আপনার নম্বর আপনার পার্টনারের পারফরম্যান্সের ওপর নির্ভর করে না।</p>
+                            <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3 leading-relaxed">পরীক্ষায় পার্টনার যদি নার্ভাস হয়ে ব্ল্যাংক হয়ে যান বা একদমই কথা বলতে না পারেন, তবে এটি নিয়ে ঘাবড়ানোর কিছু নেই - আপনার নম্বর আপনার পার্টনারের পারফরম্যান্সের ওপর নির্ভর করে না।</p>
                         </div>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
-                            <div class="bg-white dark:bg-slate-800/50 rounded-lg p-3 space-y-1">
-                                <p class="text-[13px] font-bold text-amber-700 dark:text-amber-400 uppercase">পরীক্ষকের হস্তক্ষেপ</p>
-                                <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3">পার্টনার প্রশ্ন করতে ব্যর্থ হলে পরীক্ষক নিজেই কার্ডের ওপর ভিত্তি করে প্রশ্নটি করবেন।</p>
+                            <div class="bg-white dark:bg-[#3a3a3c]/50 rounded-lg p-3 space-y-1">
+                                <p class="text-[13px] font-bold text-white dark:text-white uppercase">পরীক্ষকের হস্তক্ষেপ</p>
+                                <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3">পার্টনার প্রশ্ন করতে ব্যর্থ হলে পরীক্ষক নিজেই কার্ডের ওপর ভিত্তি করে প্রশ্নটি করবেন।</p>
                             </div>
-                            <div class="bg-white dark:bg-slate-800/50 rounded-lg p-3 space-y-1">
+                            <div class="bg-white dark:bg-[#3a3a3c]/50 rounded-lg p-3 space-y-1">
                                 <p class="text-[13px] font-bold text-green-700 dark:text-green-400 uppercase">আপনার নম্বর সুরক্ষিত</p>
-                                <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3">সঠিক প্রশ্ন করলে পার্টনার উত্তর দিতে না পারলেও আপনার নম্বর কাটা যাবে না।</p>
+                                <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3">সঠিক প্রশ্ন করলে পার্টনার উত্তর দিতে না পারলেও আপনার নম্বর কাটা যাবে না।</p>
                             </div>
-                            <div class="bg-white dark:bg-slate-800/50 rounded-lg p-3 space-y-1">
+                            <div class="bg-white dark:bg-[#3a3a3c]/50 rounded-lg p-3 space-y-1">
                                 <p class="text-[13px] font-bold text-blue-700 dark:text-blue-400 uppercase">আপনার করণীয়</p>
-                                <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3">শান্ত থাকুন, কয়েক সেকেন্ড অপেক্ষা করুন, তারপর হাসিমুখে প্রশ্ন আবার করার প্রস্তাব দিন।</p>
+                                <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3">শান্ত থাকুন, কয়েক সেকেন্ড অপেক্ষা করুন, তারপর হাসিমুখে প্রশ্ন আবার করার প্রস্তাব দিন।</p>
                             </div>
                         </div>
-                        <div class="bg-white/70 dark:bg-slate-800/40 border border-amber-200 dark:border-amber-900/50 rounded-xl p-3">
-                            <p class="text-base font-mono text-slate-800 dark:text-slate-200">Soll ich die Frage wiederholen?</p>
-                            <p class="text-[13px] text-slate-600 dark:text-slate-400 bangla-t2-t3 mt-1">(আমি কি প্রশ্নটি আবার করব?) - এরপরও পার্টনার চুপ থাকলে পরীক্ষক নিজেই হস্তক্ষেপ করবেন, আপনাকে আর কিছু করতে হবে না।</p>
+                        <div class="bg-white/70 dark:bg-[#3a3a3c]/40 border border-white dark:border-white rounded-xl p-3">
+                            <p class="text-base font-mono text-slate-800 dark:text-[#e5e5e5]">Soll ich die Frage wiederholen?</p>
+                            <p class="text-[13px] text-slate-600 dark:text-[#86868b] bangla-t2-t3 mt-1">(আমি কি প্রশ্নটি আবার করব?) - এরপরও পার্টনার চুপ থাকলে পরীক্ষক নিজেই হস্তক্ষেপ করবেন, আপনাকে আর কিছু করতে হবে না।</p>
                         </div>
-                        <p class="text-base text-slate-700 dark:text-slate-300 bangla-t2-t3 leading-relaxed">পার্টনারের নীরবতা বা নার্ভাসনেস আপনার স্কোরে কোনো নেতিবাচক প্রভাব ফেলবে না; পরীক্ষকরা এই ধরনের পরিস্থিতির জন্য সম্পূর্ণ প্রস্তুত থাকেন এবং তারা অত্যন্ত সহযোগিতাপূর্ণ আচরণ করেন।</p>
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3 leading-relaxed">পার্টনারের নীরবতা বা নার্ভাসনেস আপনার স্কোরে কোনো নেতিবাচক প্রভাব ফেলবে না; পরীক্ষকরা এই ধরনের পরিস্থিতির জন্য সম্পূর্ণ প্রস্তুত থাকেন এবং তারা অত্যন্ত সহযোগিতাপূর্ণ আচরণ করেন।</p>
                     </div>
                 </div>
             </div>
 
             <!-- Video Resources -->
             <div class="space-y-6 mt-8">
-                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm">
+                <div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-6 shadow-sm">
                     <h3 class="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2">
                         <i class="fa-brands fa-youtube text-red-600 text-xl"></i>
                         <span>Video Resources / ভিডিও রিসোর্স</span>
@@ -633,7 +633,7 @@
                             <i class="fa-solid fa-play-circle"></i>
                             <span>Goethe-Zertifikat A2 German Exam – Speaking | German A2 Oral exam</span>
                         </h4>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 bangla-t2-t3"> দেখুন কীভাবে পরীক্ষা হয়</p>
+                        <p class="text-sm text-slate-600 dark:text-[#86868b] mb-3 bangla-t2-t3"> দেখুন কীভাবে পরীক্ষা হয়</p>
                         <div class="aspect-video w-full max-w-2xl mx-auto rounded-lg overflow-hidden bg-black">
                             <iframe 
                                 src="https://www.youtube.com/embed/3BuPkYHl5V4" 
@@ -651,7 +651,7 @@
                             <i class="fa-solid fa-graduation-cap"></i>
                             <span>Complete German A2 Sprechen Exam Preparation / সম্পূর্ণ জার্মান A2 স্প্রেকেন পরীক্ষার প্রস্তুতি</span>
                         </h4>
-                        <p class="text-sm text-slate-600 dark:text-slate-400 mb-3 bangla-t2-t3">সম্পূর্ণ পরীক্ষার প্রস্তুতি, টিপস এবং কৌশল - এই ভিডিওটি দেখুন</p>
+                        <p class="text-sm text-slate-600 dark:text-[#86868b] mb-3 bangla-t2-t3">সম্পূর্ণ পরীক্ষার প্রস্তুতি, টিপস এবং কৌশল - এই ভিডিওটি দেখুন</p>
                         <div class="aspect-video w-full max-w-2xl mx-auto rounded-lg overflow-hidden bg-black">
                             <iframe 
                                 src="https://www.youtube.com/embed/TqeoDTAlzU8" 
@@ -666,23 +666,23 @@
             </div>
 
         </section>
-        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 dark:border-slate-800 pt-6">
+        <div class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4 border-t border-slate-200 dark:border-[#3a3a3c] pt-6">
             <div></div>
             <div class="flex items-center gap-2 flex-wrap justify-center">
                 <a href="https://www.facebook.com/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Facebook" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-700 hover:bg-blue-600 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-f text-lg"></i></a>
                 <a href="https://m.me/deutsch.mit.shakil/" target="_blank" rel="noopener noreferrer" aria-label="Message Deutsch mit Shakil on Facebook" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-blue-600 hover:bg-blue-500 text-white shadow-md transition-all"><i class="fa-brands fa-facebook-messenger text-lg"></i></a>
                 <a href="https://www.youtube.com/@DeutschmitShakil" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on YouTube" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-red-600 hover:bg-red-500 text-white shadow-md transition-all"><i class="fa-brands fa-youtube text-lg"></i></a>
                 <a href="https://www.instagram.com/deutschmitshakil/" target="_blank" rel="noopener noreferrer" aria-label="Visit Deutsch mit Shakil on Instagram" class="w-10 h-10 inline-flex items-center justify-center rounded-xl bg-pink-600 hover:bg-pink-500 text-white shadow-md transition-all"><i class="fa-brands fa-instagram text-lg"></i></a>
-                <a href="https://forms.gle/f5jVHmwEgXgnWkG57" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-base rounded-2xl shadow-md transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> আসন্ন কোর্সের জন্য নিবন্ধন করুন</a>
+                <a href="https://forms.gle/f5jVHmwEgXgnWkG57" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-5 py-2 bg-white hover:bg-white text-slate-950 font-extrabold text-base rounded-2xl shadow-md transition-all"><i class="fa-solid fa-arrow-right-to-bracket"></i> আসন্ন কোর্সের জন্য নিবন্ধন করুন</a>
             </div>
         </div>
 
     </main>
 
     <!-- ========== FOOTER ========== -->
-    <footer class="border-t border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 backdrop-blur-sm py-4 mt-6 text-center text-[12px] text-slate-500 dark:text-slate-400 font-medium">
+    <footer class="border-t border-slate-200 dark:border-[#3a3a3c] bg-white/70 dark:bg-[#2d2d2d]/70 backdrop-blur-sm py-4 mt-6 text-center text-[12px] text-slate-500 dark:text-[#86868b] font-medium">
         <p>🇩🇪 Deutsch mit Shakil · Goethe A2 Sprechen Master</p>
-        <p class="mt-0.5 text-[13px] text-slate-400 dark:text-slate-500">B1 Level is under construction · <i class="fa-regular fa-heart text-amber-500"></i> Viel Erfolg!</p>
+        <p class="mt-0.5 text-[13px] text-slate-400 dark:text-[#86868b]">B1 Level is under construction · <i class="fa-regular fa-heart text-white"></i> Viel Erfolg!</p>
     </footer>
 
     <script>
@@ -2101,13 +2101,13 @@
             localStorage.setItem('t1StudyMode', String(t1StudyMode));
             const btn = document.getElementById('t1-study-btn');
             if (t1StudyMode) {
-                btn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-eye-slash"></i><span class="hidden sm:block">Study Mode</span>';
                 showToast('Study Mode: AN – Antworten ausgeblendet');
             } else {
-                btn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-eye"></i><span class="hidden sm:block">Study Mode</span>';
                 showToast('Study Mode: AUS – Antworten sichtbar');
                 // Clear revealed cards when study mode is turned off
@@ -2121,13 +2121,13 @@
             localStorage.setItem('t1BookmarkFilter', String(t1BookmarkFilter));
             const btn = document.getElementById('t1-bookmark-btn');
             if (t1BookmarkFilter) {
-                btn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i><span class="hidden sm:block">Bookmarks</span>';
                 showToast('Lesezeichen-Filter: AN');
             } else {
-                btn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i>';
                 showToast('Lesezeichen-Filter: AUS');
             }
@@ -2203,10 +2203,10 @@
                 display.textContent = formatTime(t2TimerSeconds);
                 if (t2TimerRunning) {
                     btn.classList.add('bg-red-100', 'dark:bg-red-900/30', 'text-red-700', 'dark:text-red-300');
-                    btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 } else {
                     btn.classList.remove('bg-red-100', 'dark:bg-red-900/30', 'text-red-700', 'dark:text-red-300');
-                    btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 }
             }
         }
@@ -2219,10 +2219,10 @@
                 display.textContent = formatTime(t3TimerSeconds);
                 if (t3TimerRunning) {
                     btn.classList.add('bg-red-100', 'dark:bg-red-900/30', 'text-red-700', 'dark:text-red-300');
-                    btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 } else {
                     btn.classList.remove('bg-red-100', 'dark:bg-red-900/30', 'text-red-700', 'dark:text-red-300');
-                    btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 }
             }
         }
@@ -2309,12 +2309,12 @@
             const btn = document.getElementById('t2-bengali-btn');
             if (t2ShowBengali) {
                 btn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AN');
             } else {
                 btn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AUS');
             }
@@ -2330,12 +2330,12 @@
             const btn = document.getElementById('t1-bengali-btn');
             if (t1ShowBengali) {
                 btn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AN');
             } else {
                 btn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AUS');
             }
@@ -2350,12 +2350,12 @@
             const btn = document.getElementById('t3-bengali-btn');
             if (t3ShowBengali) {
                 btn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AN');
             } else {
                 btn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                btn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                btn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 btn.innerHTML = '<i class="fa-solid fa-language"></i>';
                 showToast('Translation: AUS');
             }
@@ -2375,13 +2375,13 @@
                     if (b) b.className =
                         'tab-btn active px-3.5 py-1.5 rounded-xl text-base font-bold transition-all flex items-center gap-1.5';
                     if (m) m.className =
-                        'flex flex-col items-center gap-0.5 text-sky-600 dark:text-amber-400 text-[12px] font-bold';
+                        'flex flex-col items-center gap-0.5 text-sky-600 dark:text-white text-[12px] font-bold';
                 } else {
                     v.classList.add('hidden');
                     if (b) b.className =
-                        'tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5';
+                        'tab-btn px-3.5 py-1.5 rounded-xl text-base font-bold transition-all text-slate-600 dark:text-[#86868b] hover:text-slate-900 dark:hover:text-white flex items-center gap-1.5';
                     if (m) m.className =
-                        'flex flex-col items-center gap-0.5 text-slate-500 dark:text-slate-400 text-[12px] font-bold';
+                        'flex flex-col items-center gap-0.5 text-slate-500 dark:text-[#86868b] text-[12px] font-bold';
                 }
             });
             
@@ -2411,33 +2411,33 @@
                 const bengaliBtn = document.getElementById('t1-bengali-btn');
                 if (studyBtn) {
                     if (t1StudyMode) {
-                        studyBtn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                        studyBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        studyBtn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                        studyBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                         studyBtn.innerHTML = '<i class="fa-solid fa-eye-slash"></i><span class="hidden sm:block">Study Mode</span>';
                     } else {
-                        studyBtn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                        studyBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        studyBtn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                        studyBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                         studyBtn.innerHTML = '<i class="fa-solid fa-eye"></i><span class="hidden sm:block">Study Mode</span>';
                     }
                 }
                 if (bookmarkBtn) {
                     if (t1BookmarkFilter) {
-                        bookmarkBtn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                        bookmarkBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bookmarkBtn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                        bookmarkBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                         bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i><span class="hidden sm:block">Bookmarks</span>';
                     } else {
-                        bookmarkBtn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                        bookmarkBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bookmarkBtn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                        bookmarkBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                         bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i>';
                     }
                 }
                 if (bengaliBtn) {
                     if (t1ShowBengali) {
                         bengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     } else {
                         bengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     }
                 }
                 renderT1();
@@ -2452,10 +2452,10 @@
                 if (bengaliBtn) {
                     if (t2ShowBengali) {
                         bengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     } else {
                         bengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     }
                 }
                 renderT2();
@@ -2465,10 +2465,10 @@
                 if (bengaliBtn) {
                     if (t3ShowBengali) {
                         bengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     } else {
                         bengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                        bengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     }
                 }
                 renderT3();
@@ -2551,11 +2551,11 @@
             document.getElementById('t1-count').textContent = data.length;
             
             if (data.length === 0 && t1BookmarkFilter) {
-                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 dark:text-slate-400"><i class="fa-solid fa-bookmark text-4xl mb-3 opacity-30"></i><p class="text-base font-medium">Keine Lesezeichen gefunden.</p><p class="text-[13px] mt-1">Markieren Sie Karten mit dem Lesezeichen-Symbol, um sie hier zu sehen.</p></div>`;
+                grid.innerHTML = `<div class="col-span-full text-center py-12 text-slate-500 dark:text-[#86868b]"><i class="fa-solid fa-bookmark text-4xl mb-3 opacity-30"></i><p class="text-base font-medium">Keine Lesezeichen gefunden.</p><p class="text-[13px] mt-1">Markieren Sie Karten mit dem Lesezeichen-Symbol, um sie hier zu sehen.</p></div>`;
             } else {
                 grid.innerHTML = data.map(d => {
                 const isBookmarked = t1Bookmarks.has(d.id);
-                const bookmarkIcon = isBookmarked ? 'fa-solid fa-bookmark text-amber-500' : 'fa-regular fa-bookmark text-slate-400';
+                const bookmarkIcon = isBookmarked ? 'fa-solid fa-bookmark text-white' : 'fa-regular fa-bookmark text-slate-400';
                 const bookmarkTitle = isBookmarked ? 'Lesezeichen entfernen' : 'Lesezeichen hinzufügen';
                 
                 // Study mode: check if this specific card is revealed
@@ -2565,8 +2565,8 @@
                 const cardCursor = (t1StudyMode && !isRevealed) ? 'cursor-pointer' : '';
                 const showBengali = t1ShowBengali;
                 
-                return `<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm card-hover space-y-3 ${cardCursor}" ${cardClickHandler}>
-                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
+                return `<div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-4 shadow-sm card-hover space-y-3 ${cardCursor}" ${cardClickHandler}>
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#3a3a3c] pb-2">
                         <div class="flex items-center gap-2"><span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300">#${d.id}</span><span class="text-4xl">${getT1Icon(d.keyword)}</span><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.keyword}</h3>${showBengali ? `<span class="text-[22px] text-slate-500 font-medium">${d.bn}</span>` : ''}</div>
                         <div class="flex items-center gap-1.5">
                             <button onclick="event.stopPropagation(); toggleT1Bookmark(${d.id})" class="p-1.5 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors" aria-label="${bookmarkTitle}" title="${bookmarkTitle}"><i class="${bookmarkIcon} text-lg"></i></button>
@@ -2576,7 +2576,7 @@
                     <div class="p-2.5 bg-sky-100/15 dark:bg-sky-950/30 rounded-xl border border-sky-200 dark:border-sky-900/50 space-y-1 relative">
                         <div class="flex items-center justify-between text-[12px] font-bold text-sky-700 dark:text-sky-400">
                             <span>Frage</span>
-                            <button onclick="event.stopPropagation(); speakText('${d.q.replace(/'/g,"\\'")}', this)" class="text-amber-400 hover:text-amber-300 p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
+                            <button onclick="event.stopPropagation(); speakText('${d.q.replace(/'/g,"\\'")}', this)" class="text-white hover:text-white p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
                         </div>
                         <p class="text-base font-bold text-slate-900 dark:text-white">${d.q}</p>
                         ${showBengali ? `<p class="bangla-t2-t3 text-[13px] text-slate-500 font-medium">${d.q_bn}</p>` : ''}
@@ -2588,12 +2588,12 @@
                         ${showBengali ? `<p class="bangla-t2-t3 text-[13px] text-emerald-700 dark:text-emerald-400/80 font-medium">${d.a1_bn}</p>` : ''}
                     </div>
                     <!-- Antwort 2 -->
-                    <div class="p-2.5 bg-sky-950/23 dark:bg-slate-800/50 rounded-xl border border-sky-200 dark:border-slate-700 space-y-1" style="${answerStyle}">
+                    <div class="p-2.5 bg-sky-950/23 dark:bg-[#3a3a3c]/50 rounded-xl border border-sky-200 dark:border-[#48484a] space-y-1" style="${answerStyle}">
                         <div class="flex items-center justify-between text-[12px] font-bold text-black/90 dark:text-white/90"><span>Antwort 2 (Better)</span><button onclick="event.stopPropagation(); speakText('${d.a2.replace(/'/g,"\\'")}', this)" class="hover:underline"><i class="fa-solid fa-volume-high"></i></button></div>
-                        <p class="text-base font-bold text-amber-950 dark:text-white">${d.a2}</p>
-                        ${showBengali ? `<p class="bangla-t2-t3 text-[13px] text-amber-700 dark:text-slate-400 font-medium">${d.a2_bn}</p>` : ''}
+                        <p class="text-base font-bold text-white dark:text-white">${d.a2}</p>
+                        ${showBengali ? `<p class="bangla-t2-t3 text-[13px] text-white dark:text-[#86868b] font-medium">${d.a2_bn}</p>` : ''}
                     </div>
-                    ${(t1StudyMode && !isRevealed) ? `<div class="w-full mt-2"><div class="w-full h-20 flex items-center justify-center gap-2 px-4 py-2 bg-blue-100 dark:bg-slate-800 border border-blue-300 dark:border-slate-700 rounded-xl text-blue-800 dark:text-blue-200 font-medium"><i class="fa-solid fa-eye"></i><span>দেখতে এখানে ট্যাপ করুন (Click to Reveal)</span></div></div>` : ''}
+                    ${(t1StudyMode && !isRevealed) ? `<div class="w-full mt-2"><div class="w-full h-20 flex items-center justify-center gap-2 px-4 py-2 bg-blue-100 dark:bg-[#3a3a3c] border border-blue-300 dark:border-[#48484a] rounded-xl text-blue-800 dark:text-blue-200 font-medium"><i class="fa-solid fa-eye"></i><span>দেখতে এখানে ট্যাপ করুন (Click to Reveal)</span></div></div>` : ''}
                 </div>`;
             }).join('');
             }
@@ -2617,29 +2617,29 @@
                 const speechParagraphs = d.speech.split('\n\n').filter(p => p.trim());
                 const bengaliParagraphs = d.speech_bn.split('\n\n').filter(p => p.trim());
                 
-                return `<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm card-hover space-y-3">
-                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800 pb-2">
-                        <div class="flex items-center gap-2"><span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300">#${d.id}</span><span class="text-4xl">${getT2Icon(d.topic)}</span><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.topic}</h3></div>
-                        <button onclick="speakText('${d.speech.replace(/'/g,"\\'").replace(/\n/g,' ')}', this)" class="text-amber-400 hover:text-amber-300 p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
+                return `<div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-4 shadow-sm card-hover space-y-3">
+                    <div class="flex items-center justify-between border-b border-slate-100 dark:border-[#3a3a3c] pb-2">
+                        <div class="flex items-center gap-2"><span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-white text-white dark:bg-white dark:text-white">#${d.id}</span><span class="text-4xl">${getT2Icon(d.topic)}</span><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.topic}</h3></div>
+                        <button onclick="speakText('${d.speech.replace(/'/g,"\\'").replace(/\n/g,' ')}', this)" class="text-white hover:text-white p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
                     </div>
                     <div class="space-y-2">
                         <div class="flex gap-2">
-                            <div class="w-1/2 p-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl">
-                                <p class="text-sm font-bold text-amber-800 dark:text-amber-300">${d.corner_words.top_left}</p>
+                            <div class="w-1/2 p-2 bg-white dark:bg-white/30 border border-white dark:border-white rounded-xl">
+                                <p class="text-sm font-bold text-white dark:text-white">${d.corner_words.top_left}</p>
                             </div>
-                            <div class="w-1/2 p-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl">
-                                <p class="text-sm font-bold text-amber-800 dark:text-amber-300">${d.corner_words.top_right}</p>
+                            <div class="w-1/2 p-2 bg-white dark:bg-white/30 border border-white dark:border-white rounded-xl">
+                                <p class="text-sm font-bold text-white dark:text-white">${d.corner_words.top_right}</p>
                             </div>
                         </div>
-                        <div class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 space-y-1">
+                        <div class="p-2.5 bg-slate-50 dark:bg-[#1c1c1e] rounded-xl border border-slate-200 dark:border-[#3a3a3c] space-y-1">
                             <p class="text-lg font-bold text-slate-900 dark:text-white text-center">${d.q}</p>
                         </div>
                         <div class="flex gap-2">
-                            <div class="w-1/2 p-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl">
-                                <p class="text-sm font-bold text-amber-800 dark:text-amber-300">${d.corner_words.bottom_left}</p>
+                            <div class="w-1/2 p-2 bg-white dark:bg-white/30 border border-white dark:border-white rounded-xl">
+                                <p class="text-sm font-bold text-white dark:text-white">${d.corner_words.bottom_left}</p>
                             </div>
-                            <div class="w-1/2 p-2 bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-xl">
-                                <p class="text-sm font-bold text-amber-800 dark:text-amber-300">${d.corner_words.bottom_right}</p>
+                            <div class="w-1/2 p-2 bg-white dark:bg-white/30 border border-white dark:border-white rounded-xl">
+                                <p class="text-sm font-bold text-white dark:text-white">${d.corner_words.bottom_right}</p>
                             </div>
                         </div>
                     </div>
@@ -2648,9 +2648,9 @@
                             const bengaliPara = bengaliParagraphs[idx] || '';
                             return `
                             <div class="space-y-2">
-                                <div class="p-3 bg-slate-100 dark:bg-slate-800/50 rounded-xl border border-slate-200 dark:border-slate-700 space-y-2 relative">
-                                    <button onclick="speakText('${para.replace(/'/g,"\\'")}', this)" class="absolute top-2 right-2 text-amber-400 hover:text-amber-300 p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
-                                    <p class="text-base whitespace-pre-wrap text-slate-800 dark:text-slate-200 leading-relaxed pr-8">${para}</p>
+                                <div class="p-3 bg-slate-100 dark:bg-[#3a3a3c]/50 rounded-xl border border-slate-200 dark:border-[#48484a] space-y-2 relative">
+                                    <button onclick="speakText('${para.replace(/'/g,"\\'")}', this)" class="absolute top-2 right-2 text-white hover:text-white p-1 shrink-0"><i class="fa-solid fa-volume-high"></i></button>
+                                    <p class="text-base whitespace-pre-wrap text-slate-800 dark:text-[#e5e5e5] leading-relaxed pr-8">${para}</p>
                                 </div>
                                 ${t2ShowBengali && bengaliPara ? `
                                 <div class="p-3 bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-200 dark:border-emerald-900/50 space-y-2">
@@ -2695,14 +2695,14 @@
             document.getElementById('t3-count').textContent = filteredData.length;
             
             grid.innerHTML = filteredData.map((d, idx) =>
-                `<div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm card-hover space-y-3">
-                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-slate-800 pb-2">
+                `<div class="bg-white dark:bg-[#2d2d2d] border border-slate-200 dark:border-[#3a3a3c] rounded-2xl p-4 shadow-sm card-hover space-y-3">
+                    <div class="flex items-center gap-3 border-b border-slate-100 dark:border-[#3a3a3c] pb-2">
                         <span class="text-[12px] font-black px-2 py-0.5 rounded-full bg-violet-100 text-violet-800 dark:bg-violet-950 dark:text-violet-300">প্রশ্ন ${d.id}</span>
                         <span class="t3-card-icon">${d.icon}</span>
                         <div><h3 class="text-lg font-extrabold text-slate-900 dark:text-white">${d.title}</h3></div>
                     </div>
-                    <div class="p-2.5 bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 space-y-1">
-                        <p class="text-base text-slate-700 dark:text-slate-300">${d.situation}</p>
+                    <div class="p-2.5 bg-slate-50 dark:bg-[#1c1c1e] rounded-xl border border-slate-200 dark:border-[#3a3a3c] space-y-1">
+                        <p class="text-base text-slate-700 dark:text-[#a1a1a6]">${d.situation}</p>
                         ${t3ShowBengali ? `<p class="bangla-t2-t3 text-[13px] text-slate-500">${d.situation_bn}</p>` : ''}
                     </div>
                     ${d.candidateA && d.candidateB ? `
@@ -2710,20 +2710,20 @@
                         <div class="p-3 bg-sky-50 dark:bg-sky-950/20 border border-sky-200 dark:border-sky-900/50 rounded-xl space-y-1.5">
                             <div class="text-[12px] font-black text-sky-700 dark:text-sky-400 uppercase">👩 ${d.candidateA.label}</div>
                             <ul class="space-y-1">
-                                ${d.candidateA.items.map(it => `<li class="text-[13px] text-slate-700 dark:text-slate-300 flex items-start gap-1.5">${t3ShowBengali ? `<span class="text-sky-500 mt-0.5">•</span><span class="bangla-t2-t3">${it}</span>` : `<span class="text-sky-500 mt-0.5">•</span><span>${it}</span>`}</li>`).join('')}
+                                ${d.candidateA.items.map(it => `<li class="text-[13px] text-slate-700 dark:text-[#a1a1a6] flex items-start gap-1.5">${t3ShowBengali ? `<span class="text-sky-500 mt-0.5">•</span><span class="bangla-t2-t3">${it}</span>` : `<span class="text-sky-500 mt-0.5">•</span><span>${it}</span>`}</li>`).join('')}
                             </ul>
                         </div>
                         <div class="p-3 bg-emerald-50 dark:bg-emerald-950/20 border border-emerald-200 dark:border-emerald-900/50 rounded-xl space-y-1.5">
                             <div class="text-[12px] font-black text-emerald-700 dark:text-emerald-400 uppercase">👦 ${d.candidateB.label}</div>
                             <ul class="space-y-1">
-                                ${d.candidateB.items.map(it => `<li class="text-[13px] text-slate-700 dark:text-slate-300 flex items-start gap-1.5">${t3ShowBengali ? `<span class="text-emerald-500 mt-0.5">•</span><span class="bangla-t2-t3">${it}</span>` : `<span class="text-emerald-500 mt-0.5">•</span><span>${it}</span>`}</li>`).join('')}
+                                ${d.candidateB.items.map(it => `<li class="text-[13px] text-slate-700 dark:text-[#a1a1a6] flex items-start gap-1.5">${t3ShowBengali ? `<span class="text-emerald-500 mt-0.5">•</span><span class="bangla-t2-t3">${it}</span>` : `<span class="text-emerald-500 mt-0.5">•</span><span>${it}</span>`}</li>`).join('')}
                             </ul>
                         </div>
                     </div>` : ''}
                     ${d.extra ? `
-                    <div class="p-3 bg-amber-50 dark:bg-amber-950/20 border border-amber-200 dark:border-amber-900/50 rounded-xl space-y-1">
-                        <div class="text-[12px] font-black text-amber-700 dark:text-amber-400 uppercase">🏆 ${d.extra.label}</div>
-                        ${t3ShowBengali ? `${d.extra.lines.map(l => `<p class="text-[13px] text-slate-700 dark:text-slate-300 bangla-t2-t3">${l}</p>`).join('')}` : `${d.extra.lines.map(l => `<p class="text-[13px] text-slate-700 dark:text-slate-300">${l}</p>`).join('')}`}
+                    <div class="p-3 bg-white dark:bg-white/20 border border-white dark:border-white rounded-xl space-y-1">
+                        <div class="text-[12px] font-black text-white dark:text-white uppercase">🏆 ${d.extra.label}</div>
+                        ${t3ShowBengali ? `${d.extra.lines.map(l => `<p class="text-[13px] text-slate-700 dark:text-[#a1a1a6] bangla-t2-t3">${l}</p>`).join('')}` : `${d.extra.lines.map(l => `<p class="text-[13px] text-slate-700 dark:text-[#a1a1a6]">${l}</p>`).join('')}`}
                     </div>` : ''}
                     <div class="space-y-2 overflow-y-auto pr-1">
                         ${d.lines.map(l =>
@@ -2844,7 +2844,7 @@
                 finalMessage.textContent = percentage > 90 ? 'Great job!' : percentage < 90 ?
                     'Try again to improve.' : '90% achieved. Keep practicing!';
                 finalMessage.className = percentage > 90 ? 'text-base font-bold text-emerald-500' :
-                    'text-base font-bold text-amber-500';
+                    'text-base font-bold text-white';
                 document.getElementById('q-opts').innerHTML = '';
                 document.getElementById('q-exp').classList.add('hidden');
                 document.getElementById('q-progress').textContent = quizIndex + ' / ' + qTotal;
@@ -2881,7 +2881,7 @@
                     const btn = document.createElement('button');
                     btn.dataset.correct = String(o.correct);
                     btn.className =
-                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-base sm:text-lg text-slate-800 dark:text-slate-200 font-semibold transition flex items-center justify-between';
+                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-[#1c1c1e] hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-[#3a3a3c] text-base sm:text-lg text-slate-800 dark:text-[#e5e5e5] font-semibold transition flex items-center justify-between';
                     btn.innerHTML =
                         `<span>${String.fromCharCode(65+i)}. ${o.text}</span> <i class="fa-solid fa-chevron-right text-slate-400 text-[12px]"></i>`;
                     btn.onclick = () => answerQuiz(o.correct, btn,
@@ -2908,7 +2908,7 @@
                     const btn = document.createElement('button');
                     btn.dataset.correct = String(o.correct);
                     btn.className =
-                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-base sm:text-lg text-slate-800 dark:text-slate-200 font-semibold transition flex items-center justify-between';
+                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-[#1c1c1e] hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-[#3a3a3c] text-base sm:text-lg text-slate-800 dark:text-[#e5e5e5] font-semibold transition flex items-center justify-between';
                     btn.innerHTML =
                         `<span>${String.fromCharCode(65+i)}. ${o.text}</span> <i class="fa-solid fa-chevron-right text-slate-400 text-[12px]"></i>`;
                     btn.onclick = () => answerQuiz(o.correct, btn,
@@ -2935,7 +2935,7 @@
                     const btn = document.createElement('button');
                     btn.dataset.correct = String(o.correct);
                     btn.className =
-                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-slate-950 hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-slate-800 text-base sm:text-lg text-slate-800 dark:text-slate-200 font-semibold transition flex items-center justify-between';
+                        'w-full text-left p-3.5 rounded-xl bg-slate-50 dark:bg-[#1c1c1e] hover:bg-slate-100 dark:hover:bg-slate-800 border border-slate-200 dark:border-[#3a3a3c] text-base sm:text-lg text-slate-800 dark:text-[#e5e5e5] font-semibold transition flex items-center justify-between';
                     btn.innerHTML =
                         `<span>${String.fromCharCode(65+i)}. ${o.text}</span> <i class="fa-solid fa-chevron-right text-slate-400 text-[12px]"></i>`;
                     btn.onclick = () => answerQuiz(o.correct, btn,
@@ -3034,33 +3034,33 @@
             const bengaliBtn = document.getElementById('t1-bengali-btn');
             if (studyBtn) {
                 if (t1StudyMode) {
-                    studyBtn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                    studyBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    studyBtn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                    studyBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     studyBtn.innerHTML = '<i class="fa-solid fa-eye-slash"></i><span class="hidden sm:block">Study Mode</span>';
                 } else {
-                    studyBtn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                    studyBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    studyBtn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                    studyBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     studyBtn.innerHTML = '<i class="fa-solid fa-eye"></i><span class="hidden sm:block">Study Mode</span>';
                 }
             }
             if (bookmarkBtn) {
                 if (t1BookmarkFilter) {
-                    bookmarkBtn.classList.add('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                    bookmarkBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    bookmarkBtn.classList.add('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                    bookmarkBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i><span class="hidden sm:block">Bookmarks</span>';
                 } else {
-                    bookmarkBtn.classList.remove('bg-amber-100', 'dark:bg-amber-900/30', 'text-amber-700', 'dark:text-amber-300');
-                    bookmarkBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    bookmarkBtn.classList.remove('bg-white', 'dark:bg-white', 'text-white', 'dark:text-white');
+                    bookmarkBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                     bookmarkBtn.innerHTML = '<i class="fa-solid fa-bookmark text-lg"></i>';
                 }
             }
             if (bengaliBtn) {
                 if (t1ShowBengali) {
                     bengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    bengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 } else {
                     bengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    bengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    bengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 }
             }
 
@@ -3073,10 +3073,10 @@
             if (t2BengaliBtn) {
                 if (t2ShowBengali) {
                     t2BengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    t2BengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    t2BengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 } else {
                     t2BengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    t2BengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    t2BengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 }
             }
 
@@ -3085,10 +3085,10 @@
             if (t3BengaliBtn) {
                 if (t3ShowBengali) {
                     t3BengaliBtn.classList.add('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    t3BengaliBtn.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    t3BengaliBtn.classList.remove('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 } else {
                     t3BengaliBtn.classList.remove('bg-emerald-100', 'dark:bg-emerald-900/30', 'text-emerald-700', 'dark:text-emerald-300');
-                    t3BengaliBtn.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-700', 'dark:text-slate-200');
+                    t3BengaliBtn.classList.add('bg-slate-100', 'dark:bg-[#3a3a3c]', 'text-slate-700', 'dark:text-[#e5e5e5]');
                 }
             }
 
